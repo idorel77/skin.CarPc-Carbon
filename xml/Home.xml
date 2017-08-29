@@ -1,7 +1,5 @@
 <window id="0">
-	
 	<controls>
-		
 		<control type="videowindow">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -166,7 +164,7 @@
 				<font>-</font>
 				<texturenofocus>home_6.png</texturenofocus>
 				<texturefocus border="5">home_6_p.png</texturefocus>
-				<onclick>ReloadSkin()</onclick>
+				<onclick>Shutdown</onclick>
 			</control>
 			<control type="image">
 				<description>Shutdown Button Image</description>
