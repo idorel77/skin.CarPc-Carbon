@@ -390,7 +390,7 @@
 						<item>
 							<label>$INFO[system.addontitle(Skin.String(HomeAddonButton1))]</label>
 							<label2></label2>
-							<onclick>StartAndroidActivity($INFO[Skin.String(HomeAddonButton1)])</onclick>
+							<onclick>RunAddon($INFO[Skin.String(HomeAddonButton1)])</onclick>
 							<icon>$INFO[system.addonicon(Skin.String(HomeAddonButton1))]</icon>
 							<thumb></thumb>
 							<visible>!String.IsEmpty(Skin.String(HomeAddonButton1))</visible>
