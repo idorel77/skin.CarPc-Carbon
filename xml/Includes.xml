@@ -1345,17 +1345,17 @@
 	<include name="ScrollBarCommons">
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<posx>40r</posx>
-			<posy>120</posy>
+			<posx>47r</posx>
+			<posy>146</posy>
 			<visible>Control.IsVisible(60) + ![[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)]</visible>
 			<animation effect="slide" start="40,0" end="0,0" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="40,0" time="400">Hidden</animation>
 			<animation effect="slide" start="0,0" end="-7,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<control type="scrollbar" id="60">
 				<posx>0</posx>
-				<posy>40</posy>
-				<width>26</width>
-				<height>640</height>
+				<posy>-15</posy>
+				<width>40</width>
+				<height>700</height>
 				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
 				<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
