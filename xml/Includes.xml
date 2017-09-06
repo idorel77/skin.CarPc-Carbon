@@ -166,7 +166,8 @@
 				<texturefocus border="5">home_2_p.png</texturefocus>
 				<onclick condition="Skin.String(MenuButton2Value,Maps)">StartAndroidActivity("com.google.android.apps.maps")</onclick>
 				<onclick condition="Skin.String(MenuButton2Value,Waze)">StartAndroidActivity("com.waze")</onclick>
-				<onclick condition="Skin.String(MenuButton2Value,Navit)">RunScript("plugin.program.navigation")</onclick>				
+				<onclick condition="Skin.String(MenuButton2Value,Navit)">RunScript("plugin.program.navigation")</onclick>
+				<onclick condition="Skin.String(MenuButton2Value,Sygic)">StartAndroidActivity("com.sygic.aura")</onclick>
 			</control>
 			<control type="image">
 				<description>Waze Button Image</description>
@@ -2795,7 +2796,7 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>30</height>
-			<label>For Radio button:  TuneIn - DiFM</label>
+			<label>For Radio button:  TuneIn - DiFM - Sygic</label>
 			<font>font20_title</font>
 			<align>center</align>
 		</control>
