@@ -7,7 +7,8 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
-	    <include>CommonBackground</include>
+	    	<!--<include>CommonBackground</include>-->
+		<include>MusicBackground</include>
 		<include>CommonTopBar</include>
 		<include>CommonBottomBar</include>
 		<include>PlayerControlCommons</include>
