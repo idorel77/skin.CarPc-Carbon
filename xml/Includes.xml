@@ -1132,6 +1132,28 @@
 	<include name="ScreenWidth-4x3">
 		<width>1280</width>
 	</include>
+	<include name="MusicBackground">
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<aspectratio>scale</aspectratio>
+		<include>ScreenWidth</include>
+		<height>960</height>
+		<texture colorblur="grey">$VAR[OSDImage]</texture>
+		<aspectratio>scale</aspectratio>
+		<fadetime>FanartCrossfadeTime</fadetime>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<aspectratio>scale</aspectratio>
+		<include>ScreenWidth</include>
+		<height>960</height>
+		<texture >special://skin/media/music_90.png</texture>
+		<aspectratio>scale</aspectratio>
+		<fadetime>FanartCrossfadeTime</fadetime>
+	</control>
+	</include>
 	<include name="CommonBackground">
 		<control type="image">
 			<posx>0</posx>
