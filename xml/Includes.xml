@@ -390,6 +390,7 @@
 				<texturefocus border="5">home_3_p.png</texturefocus>
 				<onclick condition="Skin.String(MenuButton3Value,DiFM)">StartAndroidActivity("com.audioaddict.di")</onclick>
 				<onclick condition="Skin.String(MenuButton3Value,TuneIn)">StartAndroidActivity("marto.androsdr2")</onclick>
+				<onclick condition="Skin.String(MenuButton3Value,Spotify)">StartAndroidActivity("com.spotify")</onclick>
 			</control>
 			<control type="image">
 				<description>Radio</description>
@@ -2773,7 +2774,7 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>30</height>
-			<label>For Navigation button:  Waze - Maps - Navit</label>
+			<label>For Navigation button:  Waze - Maps - Navit - Sygic</label>
 			<font>font20_title</font>
 			<align>center</align>
 		</control>
@@ -2818,7 +2819,7 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>30</height>
-			<label>For Radio button:  TuneIn - DiFM - Sygic</label>
+			<label>For Radio button:  TuneIn - DiFM - Spotify</label>
 			<font>font20_title</font>
 			<align>center</align>
 		</control>
