@@ -390,7 +390,7 @@
 				<texturefocus border="5">home_3_p.png</texturefocus>
 				<onclick condition="Skin.String(MenuButton3Value,DiFM)">StartAndroidActivity("com.audioaddict.di")</onclick>
 				<onclick condition="Skin.String(MenuButton3Value,TuneIn)">StartAndroidActivity("marto.androsdr2")</onclick>
-				<onclick condition="Skin.String(MenuButton3Value,Spotify)">StartAndroidActivity("com.spotify")</onclick>
+				<onclick condition="Skin.String(MenuButton3Value,Spotify)">StartAndroidActivity("com.spotify.music")</onclick>
 			</control>
 			<control type="image">
 				<description>Radio</description>
