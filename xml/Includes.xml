@@ -569,7 +569,18 @@
             </control-->
         </control>
     </include>
-      
+    	<include name="DayNight">
+		<control type="image">
+		<visible>!Skin.HasSetting(HideDayNight)</visible>
+			<posx>-1706</posx>
+			<posy>-960</posy>
+			<width>5118</width>
+			<height>2880</height>
+			<texture>grey.png</texture>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+	</include>  
 	<!--include name="CommonVolumeBottom">
 		<control type="group">
 			<visible>Player.HasMedia</visible>
