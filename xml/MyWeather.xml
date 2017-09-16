@@ -528,6 +528,6 @@
 				</item>
 			</content>
 		</control>
-		<include>NightMode</include>
+		<include>DayNight</include>
 	</controls>
 </window>
