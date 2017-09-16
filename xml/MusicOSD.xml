@@ -12,5 +12,6 @@
 		<include>CommonTopBar</include>
 		<include>CommonBottomBar</include>
 		<include>PlayerControlCommons</include>
+		<include>DayNight</include>
 	</controls>
 </window>
