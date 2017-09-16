@@ -334,7 +334,22 @@
 		</include>
 		
 		<!--------------------------------------------------------------------------------------->
-		
+		<control type="togglebutton" id="131">
+			<posx>50</posx>
+			<posy>100</posy>
+			<width>90</width>
+			<height>90</height>
+			<label>Day</label>
+			<altlabel>Night</altlabel>
+			<font>-</font>
+			<texturefocus colordiffuse="blue">defaultaddonweather.png</texturefocus>
+			<texturenofocus>defaultaddonweather.png</texturenofocus>
+			<usealttexture></usealttexture>
+			<alttexturefocus colordiffuse="blue">defaultaddonscreensaver.png</alttexturefocus>
+			<alttexturenofocus>defaultaddonscreensaver.png</alttexturenofocus>
+			<onclick>Skin.ToggleSetting(HideDayNight)</onclick>
+			<selected>Skin.HasSetting(HideDayNight)</selected>
+		</control>
 	<control type="group" id="4272">
 		<posx>220</posx>
 		<posy>105r</posy>
@@ -397,5 +412,6 @@
 		</control>
    	<include>VolumeBottom</include>
    	<include>PlayerControlsAll</include>
+	<include>DayNight</include>
 	</controls>	
 </window>
