@@ -196,5 +196,6 @@
 				</item>
 			</content>
 		</control>
+		<include>DayNight</include>
 	</controls>
 </window>
