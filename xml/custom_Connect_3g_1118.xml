@@ -154,6 +154,7 @@
 			<description>Window label</description>
 			<include>MediaWindowTitleCommons</include>
 			<label>Your IP</label>
-		</control>		      
+		</control>
+	    	<include>DayNight</include>
    </controls>      
 </window>
