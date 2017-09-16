@@ -42,5 +42,6 @@
 			<param name="panel-height">400</param>
 		</include>
 		<include>ScrollOffsetLabel</include>
+		<include>DayNight</include>
 	</controls>
 </window>
