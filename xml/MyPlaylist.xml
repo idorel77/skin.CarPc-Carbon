@@ -49,5 +49,6 @@
 			<param name="panel-posy">240</param>
 			<param name="panel-height">520</param>
 		</include>
+		<include>DayNight</include>
 	</controls>
 </window>
