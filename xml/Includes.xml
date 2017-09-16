@@ -2776,7 +2776,7 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>80</height>
-			<label>For all buttons you must enter the available value, to change action button (onclick)</label>
+			<label>Enter the name of application you want to use (only existing names above of buttons)</label>
 			<font>font30_title</font>
 			<align>center</align>
 		</control>
