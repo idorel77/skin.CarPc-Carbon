@@ -3030,7 +3030,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>3</height>
+				<height>2</height>
 				<texture >list_focus.png</texture>
 			</control>
 			<!--control type="radiobutton" id="111">
