@@ -2776,7 +2776,7 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>80</height>
-			<label>Enter the name of application you want to use (only existing names above of buttons)</label>
+			<label>For all buttons you must enter the available value, to change action button (onclick)</label>
 			<font>font30_title</font>
 			<align>center</align>
 		</control>
@@ -2784,18 +2784,18 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>30</height>
-			<label>For Navigation button:  Waze - Maps - Navit - Sygic</label>
+			<height>50</height>
+			<label>For Navigation button:  Waze - Maps - Navit</label>
 			<font>font20_title</font>
-			<align>center</align>
+			<align>left</align>
+			<aligny>center</aligny>
 		</control>
 		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
+			<posx>0</posx>
+			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
+			<height>3</height>
+			<texture >list_focus.png</texture>
 		</control>
 		<control type="button" id="102">
 			<description>This button sets string value to Navigation</description>
@@ -2807,40 +2807,33 @@
 			<font>font24_title</font>
 			<textcolor>white</textcolor>
 			<texturefocus>list_focus.png</texturefocus>
-			<texturenofocus>grey.png</texturenofocus>
+			<texturenofocus>bara_sus.png</texturenofocus>
 			<pulseonselect>false</pulseonselect>
 			<label>Navigation Button</label>
 			<label2></label2>
 			<textoffsetx>20</textoffsetx>
+			<align>center</align>
 			<onclick>Skin.SetString(MenuButton2Value)</onclick>
 			<selected>Skin.HasSetting(MenuButton2Value)</selected>
 			<onup></onup>
 			<ondown>103</ondown>
 		</control>
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 		<control type="label">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>30</height>
-			<label>For Radio button:  TuneIn - DiFM - Spotify</label>
+			<height>50</height>
+			<label>For Radio button:  TuneIn - DiFM - AddonTuneIn - Sygic</label>
 			<font>font20_title</font>
-			<align>center</align>
+			<align>left</align>
+			<aligny>center</aligny>
 		</control>
 		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
+			<posx>0</posx>
+			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
+			<height>3</height>
+			<texture >list_focus.png</texture>
 		</control>
 		<control type="button" id="103">
 			<description>Radio Button</description>
@@ -2850,38 +2843,31 @@
 			<font>font24_title</font>
 			<textcolor>white</textcolor>
 			<texturefocus>list_focus.png</texturefocus>
-			<texturenofocus>grey.png</texturenofocus>
+			<texturenofocus>bara_sus.png</texturenofocus>
 			<pulseonselect>false</pulseonselect>
 			<label>Radio Button</label>
 			<label2></label2>
 			<textoffsetx>20</textoffsetx>
+			<align>center</align>
 			<onclick>Skin.SetString(MenuButton3Value)</onclick>
 			<selected>Skin.HasSetting(MenuButton3Value)</selected>
-		</control>
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
 		</control>
 		<control type="label">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>30</height>
+			<height>50</height>
 			<label>For Programs button:  AnroidApp - Programs</label>
 			<font>font20_title</font>
-			<align>center</align>
+			<align>left</align>
+			<aligny>center</aligny>
 		</control>
 		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
+			<posx>0</posx>
+			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
+			<height>3</height>
+			<texture >list_focus.png</texture>
 		</control>
 		<control type="button" id="103">
 			<description>Programs Button</description>
@@ -2891,22 +2877,16 @@
 			<font>font24_title</font>
 			<textcolor>white</textcolor>
 			<texturefocus>list_focus.png</texturefocus>
-			<texturenofocus>grey.png</texturenofocus>
+			<texturenofocus>bara_sus.png</texturenofocus>
 			<pulseonselect>false</pulseonselect>
 			<label>Programs Button</label>
 			<label2></label2>
 			<textoffsetx>20</textoffsetx>
+			<align>center</align>
 			<onclick>Skin.SetString(MenuButton5Value)</onclick>
 			<selected>Skin.HasSetting(MenuButton5Value)</selected>
 		</control>
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
+
 			<!--control type="radiobutton" id="102">
 				<description>Show LiveTV</description>
 				<width>$PARAM[panel-width]</width>
@@ -3045,6 +3025,13 @@
 				<onclick>Skin.ToggleSetting(HideHomeButtonWeather)</onclick>
 				<selected>!Skin.HasSetting(HideHomeButtonWeather)</selected>
 				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>3</height>
+				<texture >list_focus.png</texture>
 			</control>
 			<!--control type="radiobutton" id="111">
 				<description>Hide Favourites</description>
