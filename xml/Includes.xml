@@ -40,8 +40,6 @@
 		</control>
 	  </control>	
 	</include>	
-		
-		
 	<include name="CommonTopBar">
 		<control type="image">
 			<include>Window_OpenClose_Animation_Slide_Down</include>
@@ -52,7 +50,6 @@
 			<texture>bara_sus.png</texture>
 		</control>
 	</include>
-	
 	    <!-- ####weather Info##### -->
     <include name="Weather">
         <control type="group">
@@ -136,7 +133,6 @@
             </control>
         </control>
     </include>
-	
 	<include name="CommonBottomBar">
 		<control type="image">
 			<posx>0</posx>
@@ -344,10 +340,10 @@
 			</control>
 		 </control>     
 	</include>-->
- <include name="Logo">
+<include name="Logo">
 	<control type="group" id="4225">
-	<!--visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonLogo) + !Player.HasAudio + !Control.IsVisible(4226)</visible-->
-	    <control type="image">
+		<!--visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonLogo) + !Player.HasAudio + !Control.IsVisible(4226)</visible-->
+		<control type="image">
 			<description>Normal Default Logo Image</description>
 			<posx>593</posx>
 			<posy>206</posy>
@@ -371,7 +367,6 @@
 		</control>
 	</control>
 </include>	
-
 	<include name="Radio">
 	  <control type="group" id="4240">
 		<include>Window_OpenClose_Animation_Zoom</include>
@@ -414,7 +409,6 @@
 			</control>
 		</control>
 	</include>
-	
 	<include name="MusicPlayerTitle">
 		<control type="group">
 			<posx>0</posx>
@@ -476,8 +470,7 @@
                 <scrollsuffix> - </scrollsuffix>
             </control>
         </control>
-	</include>
- 
+	</include> 
     <include name="VolumeBottom">
     	<control type="group" id="5570">
             <include>Window_OpenClose_Animation_Slide_Up</include>
@@ -556,17 +549,6 @@
                 <texture>osd_volume.png</texture>
                 <bordersize>12</bordersize>
             </control>
-            <!--control type="label">
-                <posx>100</posx>
-                <posy>0</posy>
-                <width>100</width>
-                <height>110</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>+</label>
-                <textcolor>white</textcolor>
-                <font>font80_title</font>
-            </control-->
         </control>
     </include>
     	<include name="DayNight">
@@ -581,107 +563,6 @@
 			<animation effect="fade" time="200">Hidden</animation>
 		</control>
 	</include>  
-	<!--include name="CommonVolumeBottom">
-		<control type="group">
-			<visible>Player.HasMedia</visible>
-			<posx>15</posx>
-			<posy>15</posy>
-			<control type="label">
-				<description>label</description>
-				<posx>7</posx>
-				<posy>45</posy>
-				<height>37</height>
-				<width>150</width>
-				<label>13376</label>
-				<font>font24_title</font>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>Volumelabel</description>
-				<posx>334</posx>
-				<posy>45</posy>
-				<height>37</height>
-				<width>150</width>
-				<label>$INFO[Control.GetLabel(1)]</label>
-				<font>font24_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="progress" id="2">
-				<description>Volume</description>
-				<posx>0</posx>
-				<posy>8</posy>
-				<width>337</width>
-				<height>37</height>
-				<info>Player.Volume</info>
-			</control>
-			<control type="slider" id="1">
-				<description>Volume Slider</description>
-				<posx>0</posx>
-				<posy>5</posy>
-				<width>337</width>
-				<height>47</height>
- 				<info>Player.Volume</info>
-				<action>Volume</action>
-				<texturesliderbar></texturesliderbar>
-				<textureslidernib></textureslidernib>
-				<textureslidernibfocus></textureslidernibfocus>
-			</control>
-		</control>
-	</include-->
-	<!--include name="BottomSeekPlayback">
-		<control type="group">
-			<posx>0</posx>
-			<posy>600</posy>
-			<visible>Player.HasAudio | Player.HasVideo</visible>
-			<control type="label">
-				<posx>180</posx>
-				<posy>0</posy>
-				<width>135</width>
-				<height>24</height>
-				<font>font10_title</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<label>$INFO[Player.Time(hh:mm:ss)]</label>
-			</control>
-			<control type="label">
-				<posx>240r</posx>
-				<posy>0</posy>
-				<width>135</width>
-				<height>24</height>
-				<font>font10_title</font>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[Player.Duration(hh:mm:ss)]</label>
-			</control>
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>150</posx>
-				<posy>0</posy>
-				<width>979</width>
-				<height>9</height>
-				<info>Player.Progress</info>
-				<texturebg flipy="true" border="10,0,10,0">HeaderProgressBack.png</texturebg>
-				<midtexture flipy="true" border="10,0,10,0">HeaderProgressFront.png</midtexture>
-			</control>
-			<control type="slider" id="87">
-				<description>Seek Slider</description>
-				<posx>150</posx>
-				<posy>-5</posy>
-				<width>979</width>
-				<height>15</height>
-				<action>seek</action>
-				<texturesliderbar>OSDProgressBack2.png</texturesliderbar>
-				<textureslidernib>OSDSliderNib.png</textureslidernib>
-				<textureslidernibfocus>OSDSliderNib.png</textureslidernibfocus>
-			</control>
-		</control>
-	</include-->
-	
 	<include name="CommonAudioVideoTitle">
         <control type="group">
             <posx>0</posx>
@@ -765,10 +646,10 @@
 				<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
 				<texturenofocus>osd_previous.png</texturenofocus>
 				<onleft></onleft>
-                		<onright>Control.SetFocus(602)</onright>
-                		<onup>Control.SetFocus(602)</onup>
-        			<ondown>Control.SetFocus(4201)</ondown>
-                		<onclick>PlayerControl(Previous)</onclick>
+                <onright>Control.SetFocus(602)</onright>
+                <onup>Control.SetFocus(602)</onup>
+        		<ondown>Control.SetFocus(4201)</ondown>
+                <onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="togglebutton" id="602">
 				<posx>120</posx>
@@ -784,9 +665,9 @@
 				<alttexturefocus colordiffuse="blue">osd_play.png</alttexturefocus>
 				<alttexturenofocus>osd_play.png</alttexturenofocus>
 				<onleft>Control.SetFocus(600)</onleft>
-                		<onright>Control.SetFocus(603)</onright>
-                		<onup>Control.SetFocus(603)</onup>
-                		<ondown>Control.SetFocus(600)</ondown>
+                <onright>Control.SetFocus(603)</onright>
+                <onup>Control.SetFocus(603)</onup>
+                <ondown>Control.SetFocus(600)</ondown>
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="603">
@@ -799,9 +680,9 @@
 				<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
 				<texturenofocus>osd_stop.png</texturenofocus>
 				<onleft>Control.SetFocus(602)</onleft>
-                		<onright>Control.SetFocus(605)</onright>
-                		<onup>Control.SetFocus(605)</onup>
-                		<ondown>Control.SetFocus(602)</ondown>
+                <onright>Control.SetFocus(605)</onright>
+                <onup>Control.SetFocus(605)</onup>
+                <ondown>Control.SetFocus(602)</ondown>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="605">
@@ -814,248 +695,13 @@
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<texturenofocus>osd_next.png</texturenofocus>
 				<onleft>Control.SetFocus(603)</onleft>
-                		<onright>Control.SetFocus(4298)</onright>
-                		<onup>Control.SetFocus(4298)</onup>
-                		<ondown>Control.SetFocus(603)</ondown>
+                <onright>Control.SetFocus(4298)</onright>
+                <onup>Control.SetFocus(4298)</onup>
+                <ondown>Control.SetFocus(603)</ondown>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 		</control>
 	</include>
-
-	<!--include name="OptionsButtonCommons">
-		<control type="group">
-			<include>Window_OpenClose_Animation_Slide_Down</include>
-			<posx>75r</posx>
-			<posy>1</posy>
-			<visible>!Window.IsActive(PlayerControls)</visible>
-			<include>VisibleFadeEffect</include>
-			<control type="button">
-				<description>Options Button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>100</height>
-				<font>-</font>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<onclick>Skin.ToggleSetting(MediaSubMenuVisible)</onclick>
-			</control>
-			<control type="image">
-				<description>Options Button Image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>100</height>
-				<texture>icon_system.png</texture>
-			</control>
-		</control>
-	</include-->
-
-	<!--include name="MediaSubMenu">
-		<control type="button" id="19">
-			<description>Filter button needed for panel below to work</description>
-			<visible>false</visible>
-		</control>
-		<control type="panel" id="9002">
-			<visible>!Window.IsActive(PlayerControls)</visible>
-			<include>Window_OpenClose_Animation_Slide_Up</include>
-			<include>SubMenuCommonLayout</include>
-			<content>
-				<item>
-					<label>1036</label>
-					<onclick>ActivateWindow(1115)</onclick>
-					<icon>arrow-big-up.png</icon>
-				</item>
-				<item>
-					<label>587</label>
-					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
-					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
-					<icon>icon_filter_w.png</icon>
-					<visible>!Container.Filtered</visible>
-				</item>
-				<item>
-					<label>587</label>
-					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
-					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
-					<icon>icon_filter_on_w.png</icon>
-					<visible>Container.Filtered</visible>
-				</item>
-				<item>
-					<label>31202</label>
-					<onclick>Container.NextViewMode</onclick>
-					<icon>icon_view_w.png</icon>
-				</item>
-				
-				<item>
-					<label>31200</label>
-					<onclick>ParentDir</onclick>
-					<icon>icon_back_w.png</icon>
-				</item>
-				
-			</content>
-		</control>
-	</include-->
-    
-	<!--include name="ButtonHomeSubCommonValues">
-		<height>50</height>
-		<width>200</width>
-		<textwidth>190</textwidth>
-		<align>center</align>
-		<aligny>center</aligny>
-		<font>font10</font>
-		<textcolor>grey2</textcolor>
-		<focusedcolor>white</focusedcolor>
-		<texturefocus border="5">HomeSubFO.png</texturefocus>
-		<texturenofocus border="5">HomeSubNF.png</texturenofocus>
-		<pulseonselect>false</pulseonselect>
-		<textureradioon>HomeTab-focus.png</textureradioon>
-		<textureradiooff>-</textureradiooff>
-		<radioposx>5</radioposx>
-		<radioposy>43</radioposy>
-		<radiowidth>190</radiowidth>
-		<radioheight>5</radioheight>
-	</include-->
-	
-	<!--include name="ButtonCommonValues2">
-		<height>60</height>
-		<width>298</width>
-		<textoffsetx>10</textoffsetx>
-		<textwidth>280</textwidth>
-		<textcolor>black</textcolor>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>font13</font>
-		<texturefocus>button-focus2.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
-		<pulseonselect>false</pulseonselect>
-	</include-->
-	
-	<!--include name="ButtonInfoDialogsCommonValues">
-		<height>50</height>
-		<width>158</width>
-		<align>center</align>
-		<aligny>center</aligny>
-		<font>font12_title</font>
-		<texturefocus border="5">IconBack-focus.png</texturefocus>
-		<texturenofocus border="5">ListNF.png</texturenofocus>
-		<pulseonselect>false</pulseonselect>
-	</include-->
-	
-	<!--include name="CommonNowPlaying">
-		<control type="group">
-			<posx>220</posx>
-			<posy>700</posy>
-			<visible>Player.HasMedia + !Window.IsVisible(PlayerControls)</visible>
-			<include>VisibleFadeEffect</include>
-			<control type="button">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>270</width>
-				<height>67</height>
-				<texturefocus border="8">IconBack.png</texturefocus>
-				<texturenofocus border="8">IconBack.png</texturenofocus>
-				<onclick>ActivateWindow(PlayerControls)</onclick>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>5</posy>
-				<width>250</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>$LOCALIZE[31040]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>black</textcolor>
-				<visible>!Player.Paused</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>5</posy>
-				<width>250</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>$LOCALIZE[31043]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10_title</font>
-				<textcolor>black</textcolor>
-				<visible>Player.Paused</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>24</posy>
-				<width>250</width>
-				<height>20</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>black</textcolor>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>45</posy>
-				<width>250</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
-				<label>[B]$INFO[MusicPlayer.Album][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>black</textcolor>
-				<visible>Player.HasAudio</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>45</posy>
-				<width>250</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[VideoPlayer.Studio][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>black</textcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>45</posy>
-				<width>250</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>black</textcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
-			</control>
-			<control type="fadelabel">
-				<posx>10</posx>
-				<posy>45</posy>
-				<width>250</width>
-				<height>15</height>
-				<scrollout>false</scrollout>
-				<pauseatend>3000</pauseatend>
-				<label>[B]$INFO[VideoPlayer.Artist][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font10</font>
-				<textcolor>black</textcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
-			</control>
-		</control>
-	</include-->
 	--------------------------------------------------------------------------------------------------------------------------
 	
 	<constant name="FanartCrossfadeTime">500</constant>
@@ -1380,7 +1026,7 @@
 	<include name="ScrollBarCommons">
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<posx>47r</posx>
+			<posx>52r</posx>
 			<posy>146</posy>
 			<visible>Control.IsVisible(60) + ![[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)]</visible>
 			<animation effect="slide" start="40,0" end="0,0" time="400">Visible</animation>
@@ -1388,9 +1034,9 @@
 			<animation effect="slide" start="0,0" end="-7,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<control type="scrollbar" id="60">
 				<posx>0</posx>
-				<posy>-15</posy>
-				<width>40</width>
-				<height>700</height>
+				<posy>50</posy>
+				<width>50</width>
+				<height>570</height>
 				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
 				<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
@@ -1404,6 +1050,43 @@
 				<orientation>vertical</orientation>
 				<animation effect="fade" time="150">Visible</animation>
 				<animation effect="fade" time="150">Hidden</animation>
+			</control>
+			<control type="image">
+				<description>PageUp</description>
+				<posx>0</posx>
+				<posy>-15</posy>
+				<width>50</width>
+				<height>60</height>
+				<texture colordiffuse="30FFFFFF">white.png</texture>
+			</control>
+			<control type="button">
+				<description>PageUp</description>
+				<posx>5</posx>
+				<posy>-10</posy>
+				<width>40</width>
+				<height>50</height>
+				<texturenofocus colordiffuse="grey">arrow_up.png</texturenofocus>
+				<texturefocus colordiffuse="blue">arrow_up.png</texturefocus>
+				<onclick>PageUp(60)</onclick>
+			</control>
+			<control type="image">
+				<description>PageUp</description>
+				<posx>0</posx>
+				<posy>625</posy>
+				<width>50</width>
+				<height>60</height>
+				<texture colordiffuse="30FFFFFF">white.png</texture>
+			</control>
+			<control type="button">
+				<description>PageDown</description>
+				<posx>5</posx>
+				<posy>630</posy>
+				<width>40</width>
+				<height>50</height>
+				<label></label>
+				<texturenofocus colordiffuse="grey">arrow_down.png</texturenofocus>
+				<texturefocus colordiffuse="blue">arrow_down.png</texturefocus>
+				<onclick>PageDown(60)</onclick>
 			</control>
 		</control>
 	</include>
