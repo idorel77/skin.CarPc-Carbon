@@ -171,7 +171,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>navit_logo2.png</texture>
+				<texture colordiffuse="icons">navit_logo2.png</texture>
 			</control>
 			<control type="label">
 				<description>Waze label</description>
@@ -182,7 +182,7 @@
 				<label>Navigation</label>
 				<aligny>center</aligny>
 				<font>font50_title</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>white</textcolor>
 			</control>
 		</control>
 	</include>	
@@ -199,147 +199,6 @@
 			<include>Window_OpenClose_Animation_Zoom</include>
 		</control>
 	</include>
-<!--<include name="Visualisation">
-	    <control type="group" id="4226">
-	    	<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonVisualisation) + Player.HasAudio + !Control.IsVisible(4225)</visible>
-			<visible>Player.HasAudio + Window.IsVisible(home)</visible>
-			<include>Window_OpenClose_Animation_Zoom</include>
-			<posx>449</posx>
-			<posy>175</posy>
-			<width>383</width>
-			<height>343</height>
-		<control type="visualisation" id="2">
-			<description>visualisation</description>
-			<posx>-30</posx>
-			<posy>-70</posy>
-			<width>440</width>
-			<height>440</height>
-			<fadetime>0</fadetime>
-		</control>
-		    <control type="label">
-                <visible>true</visible>
-                <posx>68</posx>
-			    <posy>35</posy>
-                <width>240</width>
-                <height>50</height>
-                <font>font13</font>
-                <textcolor>white</textcolor>
-                <selectedcolor>selected</selectedcolor>
-                <align>center</align>
-                <info>MusicPlayer.Artist</info>
-                <scroll>true</scroll>
-                <scrollspeed>50</scrollspeed>
-                <scrollsuffix> - </scrollsuffix>
-				<wrapmultiline>false</wrapmultiline>
-            </control>
-            <control type="label">
-                <visible>true</visible>
-                <posx>47</posx>
-			    <posy>65</posy>
-                <width>290</width>
-                <height>50</height>
-                <font>font13_title</font>
-                <textcolor>white</textcolor>
-                <selectedcolor>selected</selectedcolor>
-                <align>center</align>
-                <info>MusicPlayer.Title</info>
-				<scroll>true</scroll>
-                <scrollspeed>50</scrollspeed>
-                <scrollsuffix> - </scrollsuffix>
-				<wrapmultiline>false</wrapmultiline>
-            </control>     
-        <control type="group">
-            <posx>50</posx>
-			<posy>300</posy>
-			<control type="label">
-				<visible>true</visible>
-				<posx>125</posx>
-			    <posy>0</posy>
-                <width>100</width>
-                <height>50</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-                <selectedcolor>selected</selectedcolor>
-                <align>right</align>
-				<label>[1]</label>
-				<info>MusicPlayer.Time</info>
-			</control>
-			<control type="label">
-				<visible>true</visible>
-				<posx>143</posx>
-			    <posy>0</posy>
-                <width>5</width>
-                <height>50</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-                <selectedcolor>selected</selectedcolor>
-                <align>center</align>
-				<label>/</label>		
-			</control>
-			<control type="label">
-				<visible>true</visible>
-				<posx>160</posx>
-			    <posy>0</posy>
-                <width>100</width>
-                <height>50</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-                <selectedcolor>selected</selectedcolor>
-                <align>left</align>
-				<label>[1]</label>
-				<info>MusicPlayer.Duration</info>
-			</control>
-			<!--<control type="label">
-				<description>Info Label Random</description>
-				<visible>true</visible>
-				<left>120</left>
-				<top>390</top>
-                <width>75</width>
-                <height>100</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-				<label>Random</label>
-			</control>
-			<control type="label">
-				<description>Random Status</description>
-				<visible>true</visible>
-				<left>135</left>
-				<top>410</top>
-                <width>75</width>
-                <height>100</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-				<label>Random</label>
-				<info>Playlist.Random</info>
-			</control>
-			<control type="label">
-				<description>Info Label Repeat</description>
-				<visible>true</visible>
-				<align>right</align>
-				<left>350</left>
-				<top>390</top>
-                <width>75</width>
-                <height>100</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-				<label>Repeat</label>
-			</control>
-			<control type="label">
-				<description>Repeat Status</description>
-				<visible>true</visible>
-				<align>right</align>
-				<left>338</left>
-				<top>410</top>
-                <width>75</width>
-                <height>100</height>
-				<font>font11</font>
-				<textcolor>white</textcolor>
-				<label>Repeat</label>
-				<info>Playlist.Repeat</info>
-			</control>
-			</control>
-		 </control>     
-	</include>-->
 <include name="Logo">
 	<control type="group" id="4225">
 		<!--visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonLogo) + !Player.HasAudio + !Control.IsVisible(4226)</visible-->
@@ -393,7 +252,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>radio2.png</texture>
+				<texture colordiffuse="icons">radio2.png</texture>
 			</control>
 			<control type="label">
 				<description>Radio label</description>
@@ -405,7 +264,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>
-				<textcolor>FFFFFFFF</textcolor>
+				<textcolor>white</textcolor>
 			</control>
 		</control>
 	</include>
@@ -495,8 +354,8 @@
 				<posy>15</posy>
 				<width>1</width>
 				<height>80</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>blue</colordiffuse>
+				<texture >linie_albastra_v.png</texture>
+				<colordiffuse></colordiffuse>
 			</control>
 			<control type="image">
                 <description>Volume down</description>
@@ -504,20 +363,9 @@
                 <posy>5</posy>
                 <width>90</width>
                 <height>100</height>
-                <texture>osd_volume2.png</texture>
+                <texture colordiffuse="icons">osd_volume2.png</texture>
                 <bordersize>12</bordersize>
             </control>
-            <!--control type="label">
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>90</width>
-                <height>120</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label> - </label>
-                <textcolor>white</textcolor>
-                <font>font80_title</font>
-            </control-->
             <control type="button" id="5571">
                 <ondown>Control.SetFocus()</ondown>
                 <onup>Control.SetFocus()</onup>
@@ -537,8 +385,8 @@
 				<posy>15</posy>
 				<width>1</width>
 				<height>80</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>blue</colordiffuse>
+				<texture >linie_albastra_v.png</texture>
+				<colordiffuse></colordiffuse>
 			</control>
 			<control type="image">
                 <description>Volume up</description>
@@ -546,7 +394,7 @@
                 <posy>5</posy>
                 <width>90</width>
                 <height>100</height>
-                <texture>osd_volume.png</texture>
+                <texture colordiffuse="icons">osd_volume.png</texture>
                 <bordersize>12</bordersize>
             </control>
         </control>
@@ -644,7 +492,7 @@
 				<label>157</label>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
-				<texturenofocus>osd_previous.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_previous.png</texturenofocus>
 				<onleft></onleft>
                 <onright>Control.SetFocus(602)</onright>
                 <onup>Control.SetFocus(602)</onup>
@@ -660,10 +508,10 @@
 				<altlabel>208</altlabel>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_pause.png</texturefocus>
-				<texturenofocus>osd_pause.png</texturenofocus>
-				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<texturenofocus colordiffuse="icons">osd_pause.png</texturenofocus>
+				<usealttexture >Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<alttexturefocus colordiffuse="blue">osd_play.png</alttexturefocus>
-				<alttexturenofocus>osd_play.png</alttexturenofocus>
+				<alttexturenofocus colordiffuse="icons">osd_play.png</alttexturenofocus>
 				<onleft>Control.SetFocus(600)</onleft>
                 <onright>Control.SetFocus(603)</onright>
                 <onup>Control.SetFocus(603)</onup>
@@ -678,7 +526,7 @@
 				<label>31352</label>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
-				<texturenofocus>osd_stop.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_stop.png</texturenofocus>
 				<onleft>Control.SetFocus(602)</onleft>
                 <onright>Control.SetFocus(605)</onright>
                 <onup>Control.SetFocus(605)</onup>
@@ -693,7 +541,7 @@
 				<label>209</label>
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
-				<texturenofocus>osd_next.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_next.png</texturenofocus>
 				<onleft>Control.SetFocus(603)</onleft>
                 <onright>Control.SetFocus(4298)</onright>
                 <onup>Control.SetFocus(4298)</onup>
@@ -916,6 +764,7 @@
 				<height>100</height>
 				<texture>bara_sus.png</texture>
 			</control>
+			
 			<control type="button">
 				<description>Home Button</description>
 				<posx></posx>
@@ -923,19 +772,10 @@
 				<width>100</width>
 				<height>95</height>
 				<font></font>
-				<texturenofocus></texturenofocus>
-				<texturefocus>dialog_header.png</texturefocus>
+				<texturenofocus colordiffuse="icons">icon_home.png</texturenofocus>
+				<texturefocus colordiffuse="icons">icon_home.png</texturefocus>
 				<onclick>ActivateWindow(Home)</onclick>
-			</control>
-			<control type="image">
-				<description>Home</description>
-				<posx>0</posx>
-				<posy>2</posy>
-				<width>100</width>
-				<height>100</height>
-				<texture>icon_home.png</texture>
-				<include>VisibleFadeEffect</include>
-			</control>
+			</control>	
 		</control>
 		<control type="grouplist">
 			<include>VisibleFadeEffect</include>
@@ -1097,7 +937,7 @@
 			<width>2</width>
 			<height>59</height>
 			<texture border="2">separator.png</texture>
-			<colordiffuse>FF464646</colordiffuse>
+			<colordiffuse>icons</colordiffuse>
 		</control>
 		<control type="button">
 			<description>Close Button</description>
@@ -1195,7 +1035,7 @@
 				<width>90</width>
 				<height>100</height>
 				<bordersize>12</bordersize>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="icons">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">
@@ -1203,8 +1043,8 @@
 				<posy>15</posy>
 				<width>1</width>
 				<height>80</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>blue</colordiffuse>
+				<texture >linie_albastra_v.png</texture>
+				<colordiffuse></colordiffuse>
 			</control>
 		</itemlayout>
 		<focusedlayout height="110" width="120">
@@ -1221,7 +1061,7 @@
 				<width>90</width>
 				<height>100</height>
 				<bordersize>12</bordersize>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<texture colordiffuse="icons">$INFO[ListItem.Icon]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 		</focusedlayout>
@@ -1264,7 +1104,7 @@
 				<width>40</width>
 				<height>40</height>
 				<label></label>
-				<texturenofocus>osd_volume.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_volume.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
 				<onclick>ActivateWindow(1112)</onclick>
 			</control>
@@ -1276,9 +1116,9 @@
 				<height>40</height>
 				<label></label>
 				<texturefocus colordiffuse="blue">osd_pause.png</texturefocus>
-				<texturenofocus>osd_pause.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_pause.png</texturenofocus>
 				<alttexturefocus colordiffuse="blue">osd_play.png</alttexturefocus>
-				<alttexturenofocus>osd_play.png</alttexturenofocus>
+				<alttexturenofocus colordiffuse="icons">osd_play.png</alttexturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
@@ -1381,7 +1221,7 @@
 				<width>40</width>
 				<height>40</height>
 				<label></label>
-				<texturenofocus>osd_next.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_next.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
@@ -1392,7 +1232,7 @@
 				<width>40</width>
 				<height>40</height>
 				<label></label>
-				<texturenofocus>osd_stop.png</texturenofocus>
+				<texturenofocus colordiffuse="icons">osd_stop.png</texturenofocus>
 				<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
@@ -1723,7 +1563,7 @@
 					<posy>$PARAM[panel-posy]</posy>
 					<width>350</width>
 					<height>$PARAM[panel-height]</height>
-					<texture>dialog_back.png</texture>
+					<texture>bara.png</texture>
 				</control>
 				<control type="grouplist">
 					<posx>0</posx>
@@ -1749,14 +1589,6 @@
 					<include condition="Window.IsVisible(VideoOSD)">VideoOSDMenu</include>
 					<include condition="Window.IsVisible(VideoPlaylist)">VideoPlaylistMenu</include>
 				</control>
-				<!--control type="image">
-					<description>Panel Arrow image</description>
-					<posx>110r</posx>
-					<posy>125r</posy>
-					<width>75</width>
-					<height>41</height>
-					<texture>arrow_up.png</texture>
-				</control-->
 			</control>
 		</control>
 	</include>
@@ -2004,14 +1836,6 @@
 		</control>
 	</include>
 	<include name="ProfilesContent">
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 		<control type="panel" id="2">
 			<posx>390</posx>
 			<posy>133</posy>
@@ -2165,14 +1989,6 @@
 				<textoffsetx>20</textoffsetx>
 			</control>
 		</control>
-		<control type="image">
-			<posx>390</posx>
-			<posy>854</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 	</include>
 	<include name="PVRMenu">
 		<control type="button" id="201">
@@ -2287,6 +2103,414 @@
 		</control>
 	</include>
 	<include name="SettingsPanel">
+		<control type="group" id="9000">
+			<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>$PARAM[panel-posx]</posx>
+			<posy>120</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>750</height>
+			<onleft>9000</onleft>
+			<onright>9001</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+		<control type="group" id="4100">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>0</posx>
+			<posy>50</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4101">
+                <onup>Control.SetFocus(4311)</onup>
+                <ondown>Control.SetFocus(4111)</ondown>
+                <onleft></onleft>
+                <onright>Control.SetFocus(4151)</onright>
+                <posx>10</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(PlayerSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Appearance</description>
+				<posx>50</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_player.png</texture>
+			</control>
+			<control type="label">
+				<posx>280</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>500</width>
+				<label>14200</label>
+				<label2>31408</label2>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>
+		<control type="group" id="4110">
+		    <include>Window_OpenClose_Animation_Zoom</include>
+			<posx>10</posx>
+			<posy>170</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4111">
+                <onup>Control.SetFocus(4101)</onup>
+                <ondown>Control.SetFocus(4121)</ondown>
+                <onright>Control.SetFocus(4161)</onright>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(MediaSettings)</onclick>
+			</control>
+			<control type="image">
+				<posx>50</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_media.png</texture>
+			</control>
+			<control type="label">
+				<posx>370</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>14211</label>
+				<label2>31409</label2>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>	
+		<control type="group" id="4120">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>10</posx>
+			<posy>290</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4121">
+				<description>Weather</description>
+                <onup>Control.SetFocus(4111)</onup>
+                <ondown>Control.SetFocus(4131)</ondown>
+                <onright>Control.SetFocus(4171)</onright>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(PVRSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Weather</description>
+				<posx>50</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_livetv.png</texture>
+			</control>
+			<control type="label">
+				<posx>250</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>500</width>
+				<label>31556</label>
+				<label2>31555</label2>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>		
+		<control type="group" id="4130">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>10</posx>
+			<posy>410</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4131">
+				<description>Services</description>
+                <onup>Control.SetFocus(4121)</onup>
+                <ondown>Control.SetFocus(4141)</ondown>
+                <onright>Control.SetFocus(4181)</onright>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(ServiceSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Services</description>
+				<posx>50</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_services.png</texture>
+			</control>
+			<control type="label">
+				<description>Services</description>
+				<posx>250</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>500</width>
+				<label>14036</label>
+				<label2>31405</label2>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>	
+		<control type="group" id="4140">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>10</posx>
+			<posy>530</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4141">
+				<description>Skin Settings</description>
+                <onup>Control.SetFocus(4131)</onup>
+                <ondown>Control.SetFocus(4151)</ondown>
+                <onright>Control.SetFocus(4191)</onright>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(InterfaceSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Skin Settings</description>
+				<posx>50</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_interface.png</texture>
+			</control>
+			<control type="label">
+				<description>Services</description>
+				<posx>250</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>500</width>
+				<label>14206</label>
+				<label2>31410</label2>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>
+        <control type="group" id="4150">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>760r</posx>
+			<posy>50</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4151">
+				<description>Video</description>
+                <onup>Control.SetFocus(4141)</onup>
+                <ondown>Control.SetFocus(4161)</ondown>
+                <onleft>Control.SetFocus(4101)</onleft> 
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(SystemSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Video</description>
+				<posx>540</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_system.png</texture>
+			</control>
+			<control type="label">
+				<description>Video</description>
+				<posx>100</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>13000</label>
+				<label2>31406</label2>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>		
+		<control type="group" id="4160">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>760r</posx>
+			<posy>170</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4161">
+                <onup>Control.SetFocus(4151)</onup>
+                <ondown>Control.SetFocus(4171)</ondown>
+                <onleft>Control.SetFocus(4111)</onleft> 
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(AddonBrowser)</onclick>
+			</control>
+			<control type="image">
+				<posx>540</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_addons.png</texture>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>24001</label>
+				<label2>31407</label2>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>	
+		<control type="group" id="4170">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>760r</posx>
+			<posy>290</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4171">
+                <onup>Control.SetFocus(4161)</onup>
+                <ondown>Control.SetFocus(4181)</ondown>
+                <onleft>Control.SetFocus(4121)</onleft> 
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(Profiles)</onclick>
+			</control>
+			<control type="image">
+				<posx>540</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_profiles.png</texture>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>13200</label>
+				<label2>31411</label2>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>		
+		<control type="group" id="4180">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>760r</posx>
+			<posy>410</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4181">
+				<description>System</description>
+                <onup>Control.SetFocus(4171)</onup>
+                <ondown>Control.SetFocus(4191)</ondown>
+                <onleft>Control.SetFocus(4131)</onleft> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(SystemInfo)</onclick>
+			</control>
+			<control type="image">
+				<description>System</description>
+				<posx>540</posx>
+				<posy>10</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture colordiffuse="icons">icon_settings_systeminfo.png</texture>
+			</control>
+			<control type="label">
+				<description>System</description>
+				<posx>100</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>130</label>
+				<label2>31412</label2>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>
+		<control type="group" id="4190">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>760r</posx>
+			<posy>530</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4191">
+                <onup>Control.SetFocus(4181)</onup>
+                <ondown>Control.SetFocus(4301)</ondown>
+                <onleft>Control.SetFocus(4141)</onleft> 
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>110</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(SkinSettings)</onclick>
+			</control>
+			<control type="image">
+				<posx>560</posx>
+				<posy>10</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture colordiffuse="icons">defaultaddonlookandfeel.png</texture>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>Skin Settings</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font35_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>
+		</control>
+		</include>
+	<!--<include name="SettingsPanel">
 		<control type="panel" id="9000">
 			<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>$PARAM[panel-posx]</posx>
@@ -2440,7 +2664,7 @@
 				</item>
 			</content>
 		</control>
-	</include>
+	</include>-->
 	<include name="SkinSettingsContent">
 		<control type="grouplist" id="100">
 			<description>control area</description>
@@ -2468,18 +2692,18 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>50</height>
-			<label>For Navigation button:  Waze - Maps - Navit</label>
+			<label>For Navigation button:  Waze - Maps - Navit- Sygic</label>
 			<font>font20_title</font>
 			<align>left</align>
 			<aligny>center</aligny>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>3</height>
-			<texture >list_focus.png</texture>
-		</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>2</height>
+				<texture >linie_albastra.png</texture>
+			</control>
 		<control type="button" id="102">
 			<description>This button sets string value to Navigation</description>
 			<posx>0</posx>
@@ -2506,7 +2730,7 @@
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
 			<height>50</height>
-			<label>For Radio button:  TuneIn - DiFM - AddonTuneIn - Sygic</label>
+			<label>For Radio button:  TuneIn - DiFM - AddonTuneIn </label>
 			<font>font20_title</font>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -2515,8 +2739,8 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>3</height>
-			<texture >list_focus.png</texture>
+			<height>2</height>
+			<texture >linie_albastra.png</texture>
 		</control>
 		<control type="button" id="103">
 			<description>Radio Button</description>
@@ -2545,14 +2769,14 @@
 			<align>left</align>
 			<aligny>center</aligny>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>3</height>
-			<texture >list_focus.png</texture>
-		</control>
-		<control type="button" id="103">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>2</height>
+				<texture >linie_albastra.png</texture>
+			</control>
+		<control type="button" id="104">
 			<description>Programs Button</description>
 			<width>$PARAM[panel-width]</width>
 			<height>80</height>
@@ -2714,9 +2938,9 @@
 				<posy>0</posy>
 				<width>$PARAM[panel-width]</width>
 				<height>2</height>
-				<texture >list_focus.png</texture>
+				<texture >linie_albastra.png</texture>
 			</control>
-			<!--control type="radiobutton" id="111">
+			<!--<control type="radiobutton" id="111">
 				<description>Hide Favourites</description>
 				<width>$PARAM[panel-width]</width>
 				<height>80</height>
@@ -2730,7 +2954,7 @@
 				<onclick>Skin.ToggleSetting(HideHomeButtonFavourites)</onclick>
 				<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
 				<textoffsetx>20</textoffsetx>
-			</control-->
+			</control>-->
 		</control>
 		<control type="grouplist" id="200">
 			<description>control area</description>
@@ -2757,7 +2981,7 @@
 				<label>$LOCALIZE[31551] 1</label>
 				<label2>$INFO[system.addontitle(Skin.String(HomeAddonButton1))]</label2>
 				<textoffsetx>20</textoffsetx>
-				<onclick>Skin.SetFile(HomeAddonButton1,.com,.waze,.maps,.exe,.apk,androidapp://sources/apps/)</onclick>
+				<onclick>Skin.SetFile(HomeAddonButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.python.script))</onclick>
 			</control>
 			<control type="button" id="203">
 				<description>Home Addon Button</description>
@@ -2802,7 +3026,7 @@
 				<label>$LOCALIZE[31551] 4</label>
 				<label2>$INFO[system.addontitle(Skin.String(HomeAddonButton4))]</label2>
 				<textoffsetx>20</textoffsetx>
-				<onclick>Skin.SetAddon(HomeAddonButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.python.script)</onclick>
+				<onclick>Skin.SetAddon(HomeAddonButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable,xbmc.python.script)</onclick>
 			</control>
 			<control type="button" id="206">
 				<description>Home Addon Button</description>
@@ -3043,25 +3267,8 @@
 				<textoffsetx>20</textoffsetx>
 			</control>
 		</control>
-		
-		<control type="image">
-			<posx>390</posx>
-			<posy>774</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 	</include>
 	<include name="SysInfoContent">
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 		<control type="group">
 			<posx>390</posx>
 			<posy>133</posy>

@@ -9,13 +9,11 @@
 			<posy>0</posy>
 			<control type="image">
 				<description>Menu Panel</description>
-				<posx>-5</posx>
-				<posy>-5</posy>
-				<width>400</width>
-				<height>970</height>
-				<texture>panel.png</texture>
-				<bordertexture border="6">panel_shadow.png</bordertexture>
-				<bordersize>5</bordersize>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>390</width>
+				<height>750</height>
+				<texture>back.png</texture>
 			</control>
 			<control type="grouplist" id="9">
 				<description>button area</description>

@@ -5,7 +5,7 @@
 		<include>CommonBackground</include>
 		<include>Header</include>
 		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,16:9)">
-			<param name="panel-posx">160</param>
+			<param name="panel-posx">130</param>
 			<param name="panel-width">1500</param>
 			<param name="layout-width">500</param>
 		</include>
@@ -14,7 +14,7 @@
 			<param name="panel-width">1200</param>
 			<param name="layout-width">400</param>
 		</include>
-		
+	
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
 		<control type="textbox">

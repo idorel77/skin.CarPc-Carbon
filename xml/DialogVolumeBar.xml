@@ -4,7 +4,7 @@
 	<controls>
 		<control type="group">
 			<posx>390</posx>
-			<posy>0</posy>
+			<posy>17</posy>
 			<width>500</width>
 			<height>78</height>
 			<include>16x9_xPos_Relocation</include>

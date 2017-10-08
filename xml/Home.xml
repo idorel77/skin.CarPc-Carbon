@@ -40,7 +40,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>video2.png</texture>
+				<texture colordiffuse="icons">video2.png</texture>
 			</control>
 			<control type="label">
 				<description>Video label</description>
@@ -51,7 +51,7 @@
 				<label>Videos</label>
 				<aligny>center</aligny>
 				<font>font50_title</font>
-				<textcolor>FFFFFFFF</textcolor>					
+				<textcolor>white</textcolor>					
 			</control>
 		</control>
 		
@@ -88,7 +88,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>music2.png</texture>
+				<texture colordiffuse="icons">music2.png</texture>
 			</control>
 			<control type="label">
 				<description>Music label</description>
@@ -100,7 +100,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>
-				<textcolor>FFFFFFFF</textcolor>		
+				<textcolor>white</textcolor>		
 			</control>
 		</control>
 		
@@ -130,7 +130,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>programs2.png</texture>
+				<texture colordiffuse="icons">programs2.png</texture>
 			</control>
 			<control type="label">
 				<description>Programs label</description>
@@ -142,7 +142,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>
-				<textcolor>FFFFFFFF</textcolor>			
+				<textcolor>white</textcolor>			
 			</control>
 		</control>
 		
@@ -172,7 +172,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>shut-down2.png</texture>
+				<texture colordiffuse="icons">shut-down2.png</texture>
 			</control>
 			<control type="label">
 				<description>Shutdown label</description>
@@ -184,7 +184,7 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>
-				<textcolor>FFFFFFFF</textcolor>			
+				<textcolor>white</textcolor>			
 			</control>
 		</control>
 		
@@ -305,7 +305,7 @@
 				<posy>137</posy>
 				<width>15</width>
 				<height>25</height>
-				<texturenofocus>arrow_left.png</texturenofocus>
+				<texturenofocus colordiffuse="white">arrow_left.png</texturenofocus>
 				<texturefocus colordiffuse="blue">arrow_left.png</texturefocus>
 				<onclick>Control.Move(9010,-1)</onclick>
 			</control>
@@ -314,7 +314,7 @@
 				<posy>137</posy>
 				<width>15</width>
 				<height>25</height>
-				<texturenofocus>arrow_right.png</texturenofocus>
+				<texturenofocus colordiffuse="white">arrow_right.png</texturenofocus>
 				<texturefocus colordiffuse="blue">arrow_right.png</texturefocus>
 				<onclick>Control.Move(9010,1)</onclick>
 			</control>
@@ -343,10 +343,10 @@
 			<altlabel>Night</altlabel>
 			<font>-</font>
 			<texturefocus colordiffuse="blue">defaultaddonweather.png</texturefocus>
-			<texturenofocus>defaultaddonweather.png</texturenofocus>
+			<texturenofocus colordiffuse="icons">defaultaddonweather.png</texturenofocus>
 			<usealttexture></usealttexture>
 			<alttexturefocus colordiffuse="blue">defaultaddonscreensaver.png</alttexturefocus>
-			<alttexturenofocus>defaultaddonscreensaver.png</alttexturenofocus>
+			<alttexturenofocus colordiffuse="icons">defaultaddonscreensaver.png</alttexturenofocus>
 			<onclick>Skin.ToggleSetting(HideDayNight)</onclick>
 			<selected>Skin.HasSetting(HideDayNight)</selected>
 		</control>
@@ -367,10 +367,9 @@
 			<control type="image">
 				<posx>100</posx>
 				<posy>15</posy>
-				<width>2</width>
+				<width>1</width>
 				<height>80</height>
-				<texture border="2">separator.png</texture>
-				<colordiffuse>blue</colordiffuse>
+				<texture >linie_albastra_v.png</texture>
 			</control>
 			<control type="image">
                 <description>Fullscreen</description>
@@ -378,7 +377,7 @@
                 <posy>15</posy>
                 <width>90</width>
                 <height>80</height>
-                <texture>fullscreen.png</texture>
+                <texture colordiffuse="icons">fullscreen.png</texture>
                 <bordersize>12</bordersize>
             </control>
 		</control>	
@@ -390,12 +389,12 @@
 				<item>
 					<label></label>
 					<onclick>ActivateWindow(1118)</onclick>
-					<icon>defaultnetwork.png</icon>
+					<icon >defaultnetwork.png</icon>
 				</item>
 				<item>
 					<label>13376</label>
 					<onclick>ActivateWindow(FileManager)</onclick>
-					<icon>icon_button_filemanager.png</icon>
+					<icon >icon_button_filemanager.png</icon>
 				</item>
 				<item>
 					<label>1036</label>
