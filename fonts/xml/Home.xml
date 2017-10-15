@@ -1,0 +1,416 @@
+<window id="0">
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<include>CommonBackground</include>
+		<include>CommonTopBar</include>	
+		<include>Weather</include>
+		<include>Time</include>
+		
+		
+
+			<!--Meniu by me-->
+	<control type="group" id="4200">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>20</posx>
+			<posy>185</posy>
+			<control type="button" id="4201">
+			<ondown>Control.SetFocus(4211)</ondown>
+                	<onup>Control.SetFocus(600)</onup>
+        		<onleft>Control.SetFocus()</onleft>
+			<onright>Control.SetFocus(4251)</onright>
+				<description>Video Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>725</width>
+				<height>150</height>				
+				<texturenofocus>home_1.png</texturenofocus>
+				<texturefocus border="5">home_1_p.png</texturefocus>
+				<onclick>ActivateWindow(Videos)</onclick>
+			</control>
+			
+			<control type="image">
+				<description>Video Button Image</description>
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="icons">video2.png</texture>
+			</control>
+			<control type="label">
+				<description>Video label</description>
+				<posx>172</posx>
+				<posy>25</posy>
+				<height>100</height>
+				<width>500</width>
+				<label>Videos</label>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>white</textcolor>					
+			</control>
+		</control>
+		
+
+	  <include>Navigation</include>
+	  <include>Radio</include>
+	  <include>Logob</include>
+      <include>Logo</include>
+	  <!--<include>Visualisation</include>-->
+
+	
+		<control type="group" id="4250">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>745r</posx>
+			<posy>185</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4251">
+				<onup>Control.SetFocus(4241)</onup>
+                <ondown>Control.SetFocus(4261)</ondown>
+                <onleft>Control.SetFocus(4201)</onleft>
+				<description>Music Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>725</width>
+				<height>150</height>
+				<font>-</font>
+				<texturenofocus >home_4.png</texturenofocus>
+				<texturefocus border="5">home_4_p.png</texturefocus>
+				<onclick>ActivateWindow(Music)</onclick>
+			</control>
+			<control type="image">
+				<description>Music Button Image</description>
+				<posx>150r</posx>
+				<posy>25</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="icons">music2.png</texture>
+			</control>
+			<control type="label">
+				<description>Music label</description>
+				<posx>195r</posx>
+				<posy>25</posy>
+				<height>100</height>
+				<width>250</width>
+				<label>Music</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>white</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group" id="4260">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>565r</posx>
+			<posy>370</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4261">
+				<onup>Control.SetFocus(4251)</onup>
+                <ondown>Control.SetFocus(4271)</ondown>
+                <onleft>Control.SetFocus(4211)</onleft>
+				<description>Programs Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>545</width>
+				<height>150</height>
+				<font>-</font>
+				<texturenofocus >home_5.png</texturenofocus>
+				<texturefocus border="5">home_5_p.png</texturefocus>
+				<onclick condition="Skin.String(MenuButton5Value,AndroidApp)">ActivateWindow(Programs,androidapp://sources/apps/)</onclick>
+				<onclick condition="Skin.String(MenuButton5Value,Programs)">ActivateWindow(Programs)</onclick>
+			</control>
+			<control type="image">
+				<description>Programs Button Image</description>
+				<posx>150r</posx>
+				<posy>25</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="icons">programs2.png</texture>
+			</control>
+			<control type="label">
+				<description>Programs label</description>
+				<posx>195r</posx>
+				<posy>20</posy>
+				<height>100</height>
+				<width>350</width>
+				<label>Programs</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>white</textcolor>			
+			</control>
+		</control>
+		
+		<control type="group" id="4270">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>745r</posx>
+			<posy>551</posy>
+			<visible>true</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="4271">
+				<onup>Control.SetFocus(4261)</onup>
+                		<ondown>Control.SetFocus(4281)</ondown>
+                		<onleft>Control.SetFocus(4241)</onleft>
+				<description>Shutdown Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>725</width>
+				<height>150</height>
+				<font>-</font>
+				<texturenofocus>home_6.png</texturenofocus>
+				<texturefocus border="5">home_6_p.png</texturefocus>
+				<onclick>Shutdown</onclick>
+			</control>
+			<control type="image">
+				<description>Shutdown Button Image</description>
+				<posx>150r</posx>
+				<posy>25</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture colordiffuse="icons">shut-down2.png</texture>
+			</control>
+			<control type="label">
+				<description>Shutdown label</description>
+				<posx>195r</posx>
+				<posy>20</posy>
+				<height>100</height>
+				<width>350</width>
+				<label>Shutdown</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>white</textcolor>			
+			</control>
+		</control>
+		
+		<include>CommonBottomBar</include>
+		<include>MusicPlayerTitle</include>
+
+
+		<!--include>HomeRecentlyAddedInfo</include-->
+		<!--<include>BottomNowPLaying</include>-->
+		
+		<!--------------------------------------Shortcut Home---------------------------->
+		
+		<control type="group">
+			<posx>10</posx>
+			<posy>325r</posy>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="250,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
+			<visible> Integer.IsGreater(Container(2400).NumItems,0) | Library.HasContent(Music) </visible>
+			<control type="wraplist" id="9010">
+				<include>VisibleFadeEffect</include>
+				<posx></posx>
+				<posy>78</posy>
+				<width>200</width>
+				<height>145</height>
+				<onup>9000</onup>
+				<ondown>9002</ondown>
+				<scrolltime>0</scrolltime>
+				<orientation>Horizontal</orientation>
+				<itemlayout width="200" height="125">
+					<control type="image">
+						<posx>15</posx>
+						<posy>15</posy>
+						<height>120</height>
+						<width>170</width>
+						<texture>button_nofocus.png</texture>
+						<bordertexture border="6">panel_shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<height>140</height>
+						<width>190</width>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<font>font22</font>
+					</control>
+				</itemlayout>
+				<focusedlayout width="200" height="140">
+					<control type="image">
+						<posx>15</posx>
+						<posy>15</posy>
+						<height>110</height>
+						<width>170</width>
+						<texture>button_nofocus.png</texture>
+						<bordertexture border="6">panel_shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>!Control.HasFocus(9010)</visible>
+					</control>
+					<control type="image">
+						<posx>15</posx>
+						<posy>15</posy>
+						<height>110</height>
+						<width>170</width>
+						<texture>list_focus.png</texture>
+						<bordertexture border="6">panel_shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+						<visible>Control.HasFocus(9010)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<height>140</height>
+						<width>190</width>
+						<label>$INFO[ListItem.Label]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<font>font22</font>
+					</control>
+				</focusedlayout>
+
+				<content>
+					<!--item id="1">
+						<label>$LOCALIZE[31011][CR]$LOCALIZE[31013]</label>
+						<onclick>Control.Move(9010,1)</onclick>
+						<icon></icon>
+						<thumb></thumb>
+						<visible>Library.HasContent(Movies)</visible>
+					</item-->
+					<item id="2">
+						<label>Apps</label>
+						<onclick>Control.Move(9010,1)</onclick>
+						<icon></icon>
+						<thumb></thumb>
+						<visible>Integer.IsGreater(Container(2400).NumItems,0)</visible>
+					</item>
+					<item id="3">
+						<label>$LOCALIZE[31011][CR]$LOCALIZE[31016]</label>
+						<onclick>Control.Move(9010,1)</onclick>
+						<icon></icon>
+						<thumb></thumb>
+						<visible>Library.HasContent(Music)</visible>
+					</item>
+					<item id="4">
+						<label>24001</label>
+						<onclick>Control.Move(9010,1)</onclick>
+						<icon></icon>
+						<thumb></thumb>
+						<visible>Integer.IsGreater(Container(2400).NumItems,0)</visible>
+					</item>
+				</content>
+			</control>
+			<control type="button">
+				<posx>30</posx>
+				<posy>137</posy>
+				<width>15</width>
+				<height>25</height>
+				<texturenofocus colordiffuse="white">arrow_left.png</texturenofocus>
+				<texturefocus colordiffuse="blue">arrow_left.png</texturefocus>
+				<onclick>Control.Move(9010,-1)</onclick>
+			</control>
+			<control type="button">
+				<posx>152</posx>
+				<posy>137</posy>
+				<width>15</width>
+				<height>25</height>
+				<texturenofocus colordiffuse="white">arrow_right.png</texturenofocus>
+				<texturefocus colordiffuse="blue">arrow_right.png</texturefocus>
+				<onclick>Control.Move(9010,1)</onclick>
+			</control>
+		</control>
+		
+		<include content="HomeRecentlyAddedInfo" condition="String.IsEqual(Skin.AspectRatio,16:9)">
+			<param name="group-posx">215</param>
+			<param name="group-posy">235r</param>
+			<param name="panel-width">1460</param>
+			<param name="panel-height">100</param>
+		</include>
+		<include content="HomeRecentlyAddedInfo" condition="String.IsEqual(Skin.AspectRatio,4:3)">
+			<param name="group-posx">215</param>
+			<param name="panel-width">235r</param>
+			<param name="panel-width">1460</param>
+			<param name="panel-height">100</param>
+		</include>
+		
+		<!--------------------------------------------------------------------------------------->
+		<control type="togglebutton" id="131">
+			<posx>50</posx>
+			<posy>100</posy>
+			<width>90</width>
+			<height>90</height>
+			<label>Day</label>
+			<altlabel>Night</altlabel>
+			<font>-</font>
+			<texturefocus colordiffuse="blue">defaultaddonweather.png</texturefocus>
+			<texturenofocus colordiffuse="icons">defaultaddonweather.png</texturenofocus>
+			<usealttexture></usealttexture>
+			<alttexturefocus colordiffuse="blue">defaultaddonscreensaver.png</alttexturefocus>
+			<alttexturenofocus colordiffuse="icons">defaultaddonscreensaver.png</alttexturenofocus>
+			<onclick>Skin.ToggleSetting(HideDayNight)</onclick>
+			<selected>Skin.HasSetting(HideDayNight)</selected>
+		</control>
+	<control type="group" id="4272">
+		<posx>220</posx>
+		<posy>105r</posy>
+		<control type="button" id="4273">
+		<description>Fullscreen</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texturenofocus border="6"></texturenofocus>
+                <texturefocus >list_focus.png</texturefocus>
+				<onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
+				<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
+			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>15</posy>
+				<width>1</width>
+				<height>80</height>
+				<texture >linie_albastra_v.png</texture>
+			</control>
+			<control type="image">
+                <description>Fullscreen</description>
+                <posx>5</posx>
+                <posy>15</posy>
+                <width>90</width>
+                <height>80</height>
+                <texture colordiffuse="icons">fullscreen.png</texture>
+                <bordersize>12</bordersize>
+            </control>
+		</control>	
+			
+ 		<control type="panel" id="9002">
+			<include>VisibleFadeEffect</include>
+			<include>BottomMenuLayout</include>
+			<content>
+				<item>
+					<label></label>
+					<onclick>ActivateWindow(1118)</onclick>
+					<icon >defaultnetwork.png</icon>
+				</item>
+				<item>
+					<label>13376</label>
+					<onclick>ActivateWindow(FileManager)</onclick>
+					<icon >icon_button_filemanager.png</icon>
+				</item>
+				<item>
+					<label>1036</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<icon>icon_button_favourites.png</icon>
+				</item>
+				<item>
+					<label>5</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+					<icon>icon_button_settings.png</icon>
+				</item>
+
+			</content>
+		</control>
+   	<include>VolumeBottom</include>
+   	<include>PlayerControlsAll</include>
+	<include>DayNight</include>
+	</controls>	
+</window>

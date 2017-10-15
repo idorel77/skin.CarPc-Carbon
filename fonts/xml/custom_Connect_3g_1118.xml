@@ -1,0 +1,160 @@
+<window id="1118">
+	<defaultcontrol always="true">5001</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+     <controls>
+		
+		<include>CommonBackground</include>
+		<include>Header</include>
+		<include>Footer</include>    
+ 	   <control type="group" id="">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>250</posx>
+			<posy>200</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="">
+				<description>Connect</description>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>200</height>
+				<font>-</font>
+				<texturenofocus >header.png</texturenofocus>
+				<texturefocus>dialog_header.png</texturefocus>
+				<onclick></onclick>
+			</control>
+			<control type="label">
+				<description>Connect</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>200</height>
+				<width>1000</width>
+				<label>Your IP: $INFO[Network.IPAddress]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group" id="">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>250</posx>
+			<posy>400</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="">
+				<description>Connect</description>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>200</height>
+				<font>-</font>
+				<texturenofocus >header.png</texturenofocus>
+				<texturefocus>dialog_header.png</texturefocus>
+				<onclick></onclick>
+			</control>
+			<control type="label">
+				<description>Connect</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>200</height>
+				<width>1000</width>
+				<label>Network: $INFO[Network.LinkState]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<!--<control type="group" id="5000">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>165</posx>
+			<posy>450</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="5001">
+				<description>Connect</description>
+                <onup>Control.SetFocus()</onup>
+                <ondown>Control.SetFocus(5003)</ondown>
+                <onright>Control.SetFocus(5003)</onright>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>100</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>RunScript("special://skin/scripts/connect_3g.py")</onclick>
+			</control>
+			<control type="image">
+				<description>Connect</description>
+				<posx>37</posx>
+				<posy>20</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>special://skin/media/icon-3g.png</texture>
+			</control>
+			<control type="label">
+				<description>Connect</description>
+				<posx>350</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>Connect</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>-->
+
+
+		<!--<control type="group" id="5002">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>652</posx>
+			<posy>450</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button" id="5003">
+				<description>System Update</description>
+                <onup>Control.SetFocus()</onup>
+                <ondown>Control.SetFocus(5004)</ondown>
+                <onleft>Control.SetFocus(5001)</onleft> 
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>100</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>RunScript("special://skin/scripts/disconnect_3g.py")</onclick>
+			</control>
+			<control type="image">
+				<description>disconnect</description>
+				<posx>360</posx>
+				<posy>20</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>special://skin/media/icon-3g_2.png</texture>
+			</control>
+			<control type="label">
+				<description>System Update</description>
+				<posx>100</posx>
+				<posy>0</posy>
+				<height>100</height>
+				<width>300</width>
+				<label>Disconnect</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font30_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>-->
+
+
+		<control type="label">
+			<description>Window label</description>
+			<include>MediaWindowTitleCommons</include>
+			<label>Your IP</label>
+		</control>
+	    	<include>DayNight</include>
+   </controls>      
+</window>
