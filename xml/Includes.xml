@@ -225,7 +225,149 @@
 			<include>Window_OpenClose_Animation_Zoom</include>
 		</control>
 	</control>
-</include>	
+</include>
+	<include name="Visualisation">
+	    <control type="group" id="4226">
+	    	<!--<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonVisualisation) + Player.HasAudio + !Control.IsVisible(4225)</visible>-->
+			<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>600</posx>
+			<posy>175</posy>
+			<width>600</width>
+			<height>600</height>
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>-30</posx>
+			<posy>-70</posy>
+			<width>600</width>
+			<height>600</height>
+			<fadetime>0</fadetime>
+		</control>
+		    <control type="label">
+                <visible>true</visible>
+                <posx>68</posx>
+			    <posy>35</posy>
+                <width>240</width>
+                <height>50</height>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+                <info>MusicPlayer.Artist</info>
+                <scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+				<wrapmultiline>false</wrapmultiline>
+            </control>
+            <control type="label">
+                <visible>true</visible>
+                <posx>47</posx>
+			    <posy>65</posy>
+                <width>290</width>
+                <height>50</height>
+                <font>font13_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+                <info>MusicPlayer.Title</info>
+				<scroll>true</scroll>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+				<wrapmultiline>false</wrapmultiline>
+            </control>
+            
+        <control type="group">
+            <posx>50</posx>
+			<posy>300</posy>
+			<control type="label">
+				<visible>true</visible>
+				<posx>125</posx>
+			    <posy>0</posy>
+                <width>100</width>
+                <height>50</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+				<label>[1]</label>
+				<info>MusicPlayer.Time</info>
+			</control>
+			<control type="label">
+				<visible>true</visible>
+				<posx>143</posx>
+			    <posy>0</posy>
+                <width>5</width>
+                <height>50</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>center</align>
+				<label>/</label>		
+			</control>
+			<control type="label">
+				<visible>true</visible>
+				<posx>160</posx>
+			    <posy>0</posy>
+                <width>100</width>
+                <height>50</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>left</align>
+				<label>[1]</label>
+				<info>MusicPlayer.Duration</info>
+			</control>
+			<!--<control type="label">
+				<description>Info Label Random</description>
+				<visible>true</visible>
+				<left>120</left>
+				<top>390</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Random</label>
+			</control>
+			<control type="label">
+				<description>Random Status</description>
+				<visible>true</visible>
+				<left>135</left>
+				<top>410</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Random</label>
+				<info>Playlist.Random</info>
+			</control>
+			<control type="label">
+				<description>Info Label Repeat</description>
+				<visible>true</visible>
+				<align>right</align>
+				<left>350</left>
+				<top>390</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Repeat</label>
+			</control>
+			<control type="label">
+				<description>Repeat Status</description>
+				<visible>true</visible>
+				<align>right</align>
+				<left>338</left>
+				<top>410</top>
+                <width>75</width>
+                <height>100</height>
+				<font>font11</font>
+				<textcolor>white</textcolor>
+				<label>Repeat</label>
+				<info>Playlist.Repeat</info>
+			</control>-->
+			</control>
+		 </control>     
+	</include>
 	<include name="Radio">
 	  <control type="group" id="4240">
 		<include>Window_OpenClose_Animation_Zoom</include>
@@ -639,6 +781,7 @@
 		<width>1280</width>
 	</include>
 	<include name="MusicBackground">
+	<include>Window_OpenClose_Animation_Zoom</include>
 	<control type="image">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -877,7 +1020,7 @@
 				<posy>50</posy>
 				<width>50</width>
 				<height>570</height>
-				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
+				<texturesliderbackground >square80.png</texturesliderbackground>
 				<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
 				<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
 				<textureslidernib>blank.png</textureslidernib>
@@ -897,7 +1040,7 @@
 				<posy>-15</posy>
 				<width>50</width>
 				<height>60</height>
-				<texture colordiffuse="30FFFFFF">white.png</texture>
+				<texture>square80.png</texture>
 			</control>
 			<control type="button">
 				<description>PageUp</description>
@@ -915,7 +1058,7 @@
 				<posy>625</posy>
 				<width>50</width>
 				<height>60</height>
-				<texture colordiffuse="30FFFFFF">white.png</texture>
+				<texture>square80.png</texture>
 			</control>
 			<control type="button">
 				<description>PageDown</description>
@@ -1533,7 +1676,7 @@
 	<include name="KeyboardButton">
 		<width>140</width>
 		<height>140</height>
-		<texturenofocus colordiffuse="grey2">special://skin/media/square2.png</texturenofocus>
+		<texturenofocus >square.png</texturenofocus>
 		<texturefocus>list_focus.png</texturefocus>
 		<font>font70_title</font>
 		<align>center</align>
@@ -1563,7 +1706,7 @@
 					<posy>$PARAM[panel-posy]</posy>
 					<width>350</width>
 					<height>$PARAM[panel-height]</height>
-					<texture>bara.png</texture>
+					<texture>grey.png</texture>
 				</control>
 				<control type="grouplist">
 					<posx>0</posx>

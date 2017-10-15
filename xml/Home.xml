@@ -60,7 +60,7 @@
 	  <include>Radio</include>
 	  <include>Logob</include>
       <include>Logo</include>
-	  <!--include>Visualisation</include-->
+	  <!--<include>Visualisation</include>-->
 
 	
 		<control type="group" id="4250">

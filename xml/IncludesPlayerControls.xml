@@ -3,13 +3,6 @@
 	<include name="PlayerControlCommons">
 	<include>Window_OpenClose_Animation_Zoom</include>
 		<include>VisibleFadeEffect</include>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<include>ScreenWidth</include>
-			<height>80</height>
-			<texture border="0,0,0,2">header.png</texture>
-		</control>
 		<control type="button">
 			<description>Home Button</description>
 			<posx>10</posx>
@@ -397,8 +390,8 @@
 		<include>BottomMenu</include>
 		<include>VolumeBottom</include>
 		<include content="PopupMenu">
-			<param name="panel-posy">0</param>
-			<param name="panel-height">560</param>
+			<param name="panel-posy">180</param>
+			<param name="panel-height">600</param>
 		</include>
 	</include>
 </includes>

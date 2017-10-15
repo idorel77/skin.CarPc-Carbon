@@ -27,7 +27,7 @@
 			<posx>120</posx>
 			<posy>120</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>540</height>
+			<height>500</height>
 			<onleft>2</onleft>
 			<onright>60</onright>
 			<viewtype label="535">list</viewtype>
