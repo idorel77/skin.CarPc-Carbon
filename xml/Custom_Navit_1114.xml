@@ -1,0 +1,23 @@
+<window id="1114">
+    <controls>
+        <!-- Bottom bar background(same transparency as Navit skin) -->
+        <control type="group">
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <control type="image">
+		    <posx>0</posx>
+		    <posy>82r</posy>
+		    <width>ScreenWidth</width>
+		    <height>82</height>
+		    <texture>black.png</texture>
+		    <colordiffuse>99000000</colordiffuse>
+	    </control>
+        </control>
+        <!-- Bottom bar song/radio info -->
+        <control type="group">
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posy>82r</posy>
+            <include>CommonNowPlaying</include>
+            <!--<include>RadioStationNameNavit</include>-->
+	</control>
+    </controls>
+</window>
