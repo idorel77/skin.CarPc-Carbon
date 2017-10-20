@@ -162,7 +162,7 @@
 				<texturefocus border="5">home_2_p.png</texturefocus>
 				<onclick condition="Skin.String(MenuButton2Value,Maps)">StartAndroidActivity("com.google.android.apps.maps")</onclick>
 				<onclick condition="Skin.String(MenuButton2Value,Waze)">StartAndroidActivity("com.waze")</onclick>
-				<onclick condition="Skin.String(MenuButton2Value,Navit)">RunScript("plugin.program.navigation")</onclick>
+				<onclick condition="Skin.String(MenuButton2Value,Navit)">RunPlugin(plugin://plugin.program.navigation)</onclick>
 				<onclick condition="Skin.String(MenuButton2Value,Sygic)">StartAndroidActivity("com.sygic.aura")</onclick>
 			</control>
 			<control type="image">
