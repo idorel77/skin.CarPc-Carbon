@@ -164,7 +164,7 @@
 				<font>-</font>
 				<texturenofocus>home_6.png</texturenofocus>
 				<texturefocus border="5">home_6_p.png</texturefocus>
-				<onclick>Shutdown</onclick>
+				<onclick>ReloadSkin()</onclick>
 			</control>
 			<control type="image">
 				<description>Shutdown Button Image</description>
