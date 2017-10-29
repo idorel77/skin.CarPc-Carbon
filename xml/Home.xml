@@ -11,7 +11,18 @@
 		<include>CommonTopBar</include>	
 		<include>Weather</include>
 		<include>Time</include>
-		
+		<control type="group">	
+			<control type="image">
+				<visible>!Skin.HasSetting(HideHomeVisualisation) </visible>
+				<description>Normal Default Logo Image</description>
+				<posx>50</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>logo.png</texture>
+				<include>Window_OpenClose_Animation_Zoom</include>
+			</control>
+		</control>
 		
 
 			<!--Meniu by me-->
@@ -60,8 +71,16 @@
 	  <include>Radio</include>
 	  <include>Logob</include>
       <include>Logo</include>
-	  <!--<include>Visualisation</include>-->
+	  <include>Visualisation</include>
 
+		<control type="togglebutton" id="132">
+			<posx>593</posx>
+			<posy>206</posy>
+			<width>525</width>
+			<height>474</height>
+			<onclick>Skin.ToggleSetting(HideHomeVisualisation)</onclick>
+			<selected>Skin.HasSetting(HideHomeVisualisation)</selected>
+		</control>
 	
 		<control type="group" id="4250">
 		<include>Window_OpenClose_Animation_Zoom</include>
@@ -154,8 +173,8 @@
 			<include>VisibleFadeEffect</include>
 			<control type="button" id="4271">
 				<onup>Control.SetFocus(4261)</onup>
-                		<ondown>Control.SetFocus(4281)</ondown>
-                		<onleft>Control.SetFocus(4241)</onleft>
+                <ondown>Control.SetFocus(4281)</ondown>
+                <onleft>Control.SetFocus(4241)</onleft>
 				<description>Shutdown Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -164,6 +183,7 @@
 				<font>-</font>
 				<texturenofocus>home_6.png</texturenofocus>
 				<texturefocus border="5">home_6_p.png</texturefocus>
+				<!--<onclick>ReloadSkin()</onclick>-->
 				<onclick>Shutdown</onclick>
 			</control>
 			<control type="image">
@@ -361,7 +381,7 @@
 				<height>100</height>
 				<texturenofocus border="6"></texturenofocus>
                 <texturefocus >list_focus.png</texturefocus>
-				<onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
+				<onclick condition="Player.HasAudio">ActivateWindow(MusicOSD)</onclick>
 				<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
 			</control>
 			<control type="image">

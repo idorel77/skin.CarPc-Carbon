@@ -2,7 +2,6 @@
 <includes>
 	<include name="PlayerControlCommons">
 	<include>Window_OpenClose_Animation_Zoom</include>
-		<include>VisibleFadeEffect</include>
 		<control type="button">
 			<description>Home Button</description>
 			<posx>10</posx>
@@ -25,7 +24,6 @@
 		<control type="group">
 			<posx>300</posx>
 			<posy>10</posy>
-			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
 			<control type="button">
@@ -41,7 +39,6 @@
 			</control>
 			<control type="group">
 				<posx>64</posx>
-				<include>VisibleFadeEffect</include>
 				<visible>!Window.IsVisible(1112)</visible>
 				<control type="label">
 					<posx>0</posx>
@@ -161,7 +158,6 @@
 					<height>600</height>
 					<texture>$VAR[OSDImage]</texture>
 					<aspectratio>keep</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
 				</control>
 				<control type="label">
 					<posx>800</posx>

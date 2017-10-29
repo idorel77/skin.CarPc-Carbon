@@ -162,7 +162,7 @@
 				<texturefocus border="5">home_2_p.png</texturefocus>
 				<onclick condition="Skin.String(MenuButton2Value,Maps)">StartAndroidActivity("com.google.android.apps.maps")</onclick>
 				<onclick condition="Skin.String(MenuButton2Value,Waze)">StartAndroidActivity("com.waze")</onclick>
-				<onclick condition="Skin.String(MenuButton2Value,Navit)">RunPlugin(plugin://plugin.program.navigation)</onclick>
+				<onclick condition="Skin.String(MenuButton2Value,Navit)">RunScript("plugin.program.navigation")</onclick>
 				<onclick condition="Skin.String(MenuButton2Value,Sygic)">StartAndroidActivity("com.sygic.aura")</onclick>
 			</control>
 			<control type="image">
@@ -201,7 +201,7 @@
 	</include>
 <include name="Logo">
 	<control type="group" id="4225">
-		<!--visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonLogo) + !Player.HasAudio + !Control.IsVisible(4226)</visible-->
+		<visible>!Skin.HasSetting(HideHomeButtonLogo) + Skin.HasSetting(HideHomeVisualisation) | !Player.HasAudio</visible>
 		<control type="image">
 			<description>Normal Default Logo Image</description>
 			<posx>593</posx>
@@ -221,15 +221,14 @@
 			<height>474</height>
 			<aspectratio></aspectratio>
 			<texture>$INFO[Skin.String(CustomLogoPath)]</texture>
-			<visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))</visible>
+			<visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath)) </visible>
 			<include>Window_OpenClose_Animation_Zoom</include>
 		</control>
 	</control>
 </include>
 	<include name="Visualisation">
 	    <control type="group" id="4226">
-	    	<!--<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonVisualisation) + Player.HasAudio + !Control.IsVisible(4225)</visible>-->
-			<visible>Player.HasAudio + Window.IsVisible(home)</visible>
+	    	<visible>!Skin.HasSetting(HideHomeVisualisation) + Player.HasAudio + !Control.IsVisible(4225)</visible>
 			<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>600</posx>
 			<posy>175</posy>
@@ -237,7 +236,7 @@
 			<height>600</height>
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
-			<posx>-30</posx>
+			<posx>-40</posx>
 			<posy>-70</posy>
 			<width>600</width>
 			<height>600</height>
@@ -245,11 +244,11 @@
 		</control>
 		    <control type="label">
                 <visible>true</visible>
-                <posx>68</posx>
-			    <posy>35</posy>
+                <posx>140</posx>
+			    <posy>65</posy>
                 <width>240</width>
                 <height>50</height>
-                <font>font13</font>
+                <font>font30</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>center</align>
@@ -261,11 +260,11 @@
             </control>
             <control type="label">
                 <visible>true</visible>
-                <posx>47</posx>
-			    <posy>65</posy>
-                <width>290</width>
+                <posx>80</posx>
+			    <posy>110</posy>
+                <width>350</width>
                 <height>50</height>
-                <font>font13_title</font>
+                <font>font30_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>center</align>
@@ -275,17 +274,17 @@
                 <scrollsuffix> - </scrollsuffix>
 				<wrapmultiline>false</wrapmultiline>
             </control>
-            
+
         <control type="group">
-            <posx>50</posx>
-			<posy>300</posy>
+            <posx>110</posx>
+			<posy>430</posy>
 			<control type="label">
 				<visible>true</visible>
 				<posx>125</posx>
 			    <posy>0</posy>
                 <width>100</width>
                 <height>50</height>
-				<font>font11</font>
+				<font>font30_title</font>
 				<textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>right</align>
@@ -294,11 +293,11 @@
 			</control>
 			<control type="label">
 				<visible>true</visible>
-				<posx>143</posx>
+				<posx>135</posx>
 			    <posy>0</posy>
-                <width>5</width>
+                <width>15</width>
                 <height>50</height>
-				<font>font11</font>
+				<font>font30_title</font>
 				<textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>center</align>
@@ -310,7 +309,7 @@
 			    <posy>0</posy>
                 <width>100</width>
                 <height>50</height>
-				<font>font11</font>
+				<font>font30_title</font>
 				<textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>left</align>
@@ -415,7 +414,7 @@
 			<posx>0</posx>
             <posy>5</posy>
 			<include>Window_OpenClose_Animation_Slide_Up</include>
-			<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonMusicPlayerTitle)+ Player.HasAudio</visible>
+			<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonMusicPlayerTitle)+ Player.HasAudio + Skin.HasSetting(HideHomeVisualisation)</visible>
 			<control type="label">
                 <posx>20</posx>
                 <posy>10</posy>
@@ -1284,7 +1283,7 @@
 					<height>80</height>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
-					<onclick condition="Player.HasAudio">ActivateWindow(Visualisation)</onclick>
+					<onclick condition="Player.HasAudio">ActivateWindow(MusicOSD)</onclick>
 					<onclick condition="Player.HasVideo">ActivateWindow(FullscreenVideo)</onclick>
 				</control>
 				<control type="fadelabel">

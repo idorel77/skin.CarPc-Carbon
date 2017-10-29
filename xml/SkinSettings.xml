@@ -117,7 +117,6 @@
 					<label>Use Custom Logo</label>
 					<onclick>Skin.ToggleSetting(UseCustomLogo)</onclick>
 					<selected>Skin.HasSetting(UseCustomLogo)</selected>
-					<visible>!Skin.HasSetting(ShowBigClock)</visible>
 				</control>
 				<control type="button" id="404">
 					<description>Custom Logo Path</description>
@@ -133,7 +132,6 @@
 					<label2>[COLOR=selected]$INFO[Skin.String(CustomLogoPath)][/COLOR]</label2>
 					<onclick>Skin.SetImage(CustomLogoPath)</onclick>
 					<visible>Skin.HasSetting(UseCustomLogo)</visible>
-					<visible>!Skin.HasSetting(ShowBigClock)</visible>
 				</control>
 
 				<control type="radiobutton" id="406">
@@ -166,6 +164,21 @@
 					<onclick>Skin.ToggleSetting(UseCustomMusicOSD)</onclick>
 					<selected>Skin.HasSetting(UseCustomMusicOSD)</selected>
 					<visible>false</visible>
+				</control>
+				<control type="radiobutton" id="408">
+					<description>Show visualization</description>
+					<width>$PARAM[panel-width]</width>
+					<height>80</height>
+					<aligny>center</aligny>
+					<font>font24_title</font>
+					<textcolor>white</textcolor>
+					<texturefocus>list_focus.png</texturefocus>
+					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Hide Home Visualisation</label>
+					<textoffsetx>20</textoffsetx>
+					<onclick>Skin.ToggleSetting(HideHomeVisualisation)</onclick>
+					<selected>Skin.HasSetting(HideHomeVisualisation)</selected>
 				</control>
 
 			</control>
