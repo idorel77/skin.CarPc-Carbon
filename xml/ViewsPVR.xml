@@ -25,9 +25,9 @@
 	<include name="PVRList">
 		<control type="list" id="$PARAM[panel-id]">
 			<posx>120</posx>
-			<posy>120</posy>
+			<posy>105</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>500</height>
+			<height>540</height>
 			<onleft>2</onleft>
 			<onright>60</onright>
 			<viewtype label="535">list</viewtype>
@@ -35,6 +35,14 @@
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<itemlayout height="90" width="$PARAM[panel-width]">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>$PARAM[panel-width]</width>
+					<height>90</height>
+					<texture>bara_sus.png</texture>
+					<include>VisibleFadeEffect</include>
+				</control>
 				<control type="image">
 					<posx>10</posx>
 					<posy>10</posy>
@@ -377,7 +385,7 @@
 		<control type="group">
 			<control type="image">
 				<posx>120</posx>
-				<posy>670</posy>
+				<posy>645</posy>
 				<width>$PARAM[panel-width]</width>
 				<height>200</height>
 				<texture>panel.png</texture>
@@ -385,7 +393,7 @@
 			</control>
 			<control type="image">
 				<posx>120</posx>
-				<posy>670</posy>
+				<posy>645</posy>
 				<width>356</width>
 				<height>200</height>
 				<texture>special://skin/background/tv.jpg</texture>
@@ -394,14 +402,14 @@
 			</control>
 			<control type="videowindow">
 				<posx>120</posx>
-				<posy>670</posy>
+				<posy>645</posy>
 				<width>356</width>
 				<height>200</height>
 				<visible>Player.HasVideo</visible>
 			</control>
 			<control type="textbox">
 				<posx>485</posx>
-				<posy>678</posy>
+				<posy>653</posy>
 				<width>$PARAM[textbox-width]</width>
 				<height>176</height>
 				<label>[B]$INFO[ListItem.Plot][/B]</label>

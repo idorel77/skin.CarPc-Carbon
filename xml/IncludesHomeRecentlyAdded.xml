@@ -16,9 +16,9 @@
 				<posx>$PARAM[group-posx]</posx>
 				<posy>$PARAM[group-posy]</posy>
 				<width>630</width>
-				<height>100</height>
+				<height>150</height>
 				<control type="panel" id="2100">
-					<visible>Library.HasContent(Movies) + Container(9010).HasFocus(1)</visible>
+					<visible>Library.HasContent(Movies) + Container(9010).HasFocus(1) </visible>
 					<animation type="Visible" reversible="false">
 						<effect type="slide" start="400,0" end="0,0" delay="200" easing="out" tween="quadratic" time="400" />
 						<effect type="fade" start="0" end="100" delay="200" time="400" />
@@ -28,70 +28,71 @@
 						<effect type="fade" start="100" end="0" time="400" />
 					</animation>
 					<posx>0</posx>
-					<posy>0</posy>
+					<posy>-15</posy>
 					<width>$PARAM[panel-width]</width>
-					<height>$PARAM[panel-height]</height>
+					<height>130</height>
 					<onleft>1000</onleft>
 					<onright>2100</onright>
 					<onup>2001</onup>
 					<ondown>2001</ondown>
 					<viewtype label="535">list</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="330" width="210">
+					<orientation>horizontal</orientation>
+					<itemlayout height="150" width="150">		
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>210</width>
-							<height>330</height>
-							<texture>black.png</texture>
-							<bordertexture border="6">panel_shadow.png</bordertexture>
-							<bordersize>5</bordersize>
-							<colordiffuse>99000000</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>15</posx>
-							<posy>15</posy>
-							<width>180</width>
-							<height>270</height>
+							<posx></posx>
+							<posy></posy>
+							<width>120</width>
+							<height>130</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>110</posy>
+							<width>120</width>
+							<height>20</height>
+							<texture>black.png</texture>
+							<bordertexture border="6">panel_shadow.png</bordertexture>
+							<bordersize></bordersize>
+							<colordiffuse>99000000</colordiffuse>
+						</control>
 						<control type="label">
-							<posx>10</posx>
-							<posy>290</posy>
-							<width>190</width>
-							<height>25</height>
+							<posx>0</posx>
+							<posy>110</posy>
+							<width>106</width>
+							<height>20</height>
 							<font>font16</font>
-							<textcolor>grey2</textcolor>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="330" width="210">
+					<focusedlayout height="150" width="150">
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>210</width>
-							<height>330</height>
-							<texture>black.png</texture>
-							<bordertexture border="6">panel_shadow.png</bordertexture>
-							<bordersize>5</bordersize>
-							<colordiffuse>99000000</colordiffuse>
-						</control>
-						<control type="image">
-							<posx>15</posx>
-							<posy>15</posy>
-							<width>180</width>
-							<height>270</height>
+							<posx></posx>
+							<posy></posy>
+							<width>120</width>
+							<height>130</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>110</posy>
+							<width>120</width>
+							<height>20</height>
+							<texture>black.png</texture>
+							<bordertexture border="6">panel_shadow.png</bordertexture>
+							<bordersize></bordersize>
+							<colordiffuse>99000000</colordiffuse>
+						</control>
 						<control type="label">
-							<posx>10</posx>
-							<posy>290</posy>
-							<width>190</width>
-							<height>25</height>
+							<posx>0</posx>
+							<posy>110</posy>
+							<width>106</width>
+							<height>20</height>
 							<font>font16</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -100,14 +101,14 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="image">
-							<posx>5</posx>
-							<posy>5</posy>
-							<width>200</width>
-							<height>320</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>130</height>
 							<texture border="5">thumb_focus.png</texture>
 						</control>
 					</focusedlayout>
-				<content target="movies" sortby="date" limit="10">videodb://recentlyaddedmovies/</content>
+				<content target="movies" sortby="date" limit="15">videodb://recentlyaddedmovies/</content>
 				</control>
 				<control type="panel" id="2200">
 				<visible>Container(9010).HasFocus(2)</visible>
@@ -120,7 +121,7 @@
 						<effect type="fade" start="100" end="0" time="400" />
 					</animation>
 					<posx>0</posx>
-					<posy>5</posy>
+					<posy>-15</posy>
 					<width>$PARAM[panel-width]</width>
 					<height>130</height>
 					<onleft>1000</onleft>
@@ -131,79 +132,79 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<itemlayout height="130" width="150">
-						<!--control type="image">
+					<itemlayout height="150" width="150">
+						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>105</width>
-							<height>110</height>
-							<texture>black.png</texture>
-							<bordertexture border="3">panel_shadow.png</bordertexture>
-							<bordersize>3</bordersize>
-							<colordiffuse>99000000</colordiffuse>
-						</control-->
+							<width>120</width>
+							<height>130</height>
+							<texture>square.png</texture>
+							<bordertexture border="6"></bordertexture>
+							<bordersize></bordersize>
+							<colordiffuse></colordiffuse>
+						</control>
 						<control type="image">
-							<posx>8</posx>
-							<posy>8</posy>
-							<width>110</width>
-							<height>110</height>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>114</width>
+							<height>97</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
-						<!--control type="label">
-							<posx>8</posx>
-							<posy>93</posy>
-							<width>95</width>
-							<height>13</height>
-							<font>font11</font>
-							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control-->
-					</itemlayout>
-					<focusedlayout height="130" width="150">
-						<!--control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>105</width>
-							<height>110</height>
-							<texture>black.png</texture>
-							<bordertexture border="5">panel_shadow.png</bordertexture>
-							<bordersize>3</bordersize>
-							<colordiffuse>99000000</colordiffuse>
-						</control-->
-						<control type="image">
-							<posx>8</posx>
-							<posy>8</posy>
-							<width>110</width>
-							<height>110</height>
-							<texture background="true">$INFO[Listitem.Icon]</texture>
-						</control>
-						<!--control type="label">
-							<posx>8</posx>
-							<posy>93</posy>
-							<width>95</width>
-							<height>13</height>
-							<font>font11</font>
+						<control type="label">
+							<posx>2</posx>
+							<posy>100</posy>
+							<width>106</width>
+							<height>30</height>
+							<font>font16</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control-->
+						</control>
+					</itemlayout>
+					<focusedlayout height="130" width="150">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>130</height>
+							<texture>black.png</texture>
+							<bordertexture border="6">panel_shadow.png</bordertexture>
+							<bordersize></bordersize>
+							<colordiffuse>99000000</colordiffuse>
+						</control>
 						<control type="image">
 							<posx>3</posx>
 							<posy>3</posy>
-							<width>115</width>
-							<height>115</height>
+							<width>114</width>
+							<height>97</height>
+							<texture background="true">$INFO[Listitem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posx>2</posx>
+							<posy>100</posy>
+							<width>106</width>
+							<height>30</height>
+							<font>font16</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>130</height>
 							<texture border="5">thumb_focus.png</texture>
 						</control>
 					</focusedlayout>
 				<content>androidapp://sources/apps/</content>
 				</control>
             <control type="panel" id="2300">
-					<visible>Library.HasContent(Music) + Container(9010).HasFocus(3)</visible>
+					<visible>Library.HasContent(Music) + Container(9010).HasFocus(3) </visible>
 					<animation type="Visible" reversible="false">
 						<effect type="slide" start="400,0" end="0,0" delay="200" easing="out" tween="quadratic" time="400" />
 						<effect type="fade" start="0" end="100" delay="200" time="400" />
@@ -213,7 +214,7 @@
 						<effect type="fade" start="100" end="0" time="400" />
 					</animation>
 					<posx>0</posx>
-					<posy>5</posy>
+					<posy>-15</posy>
 					<width>$PARAM[panel-width]</width>
 					<height>130</height>
 					<onleft>1000</onleft>
@@ -224,61 +225,61 @@
 					<pagecontrol></pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<itemlayout height="130" width="150">
+					<itemlayout height="150" width="150">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>110</width>
-							<height>110</height>
-							<texture>black.png</texture>
-							<bordertexture border="6">panel_shadow.png</bordertexture>
+							<width>120</width>
+							<height>130</height>
+							<texture>square.png</texture>
+							<bordertexture border="6"></bordertexture>
 							<bordersize></bordersize>
-							<colordiffuse>99000000</colordiffuse>
+							<colordiffuse></colordiffuse>
 						</control>
 						<control type="image">
-							<posx></posx>
-							<posy></posy>
-							<width>110</width>
-							<height>90</height>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>114</width>
+							<height>97</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posx>0</posx>
-							<posy>92</posy>
-							<width>110</width>
-							<height>13</height>
-							<font>font11</font>
-							<textcolor>blue</textcolor>
+							<posx>2</posx>
+							<posy>100</posy>
+							<width>106</width>
+							<height>30</height>
+							<font>font16</font>
+							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="130" width="150">
+					<focusedlayout height="150" width="150">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>110</width>
-							<height>110</height>
+							<width>120</width>
+							<height>130</height>
 							<texture>black.png</texture>
 							<bordertexture border="6">panel_shadow.png</bordertexture>
 							<bordersize></bordersize>
 							<colordiffuse>99000000</colordiffuse>
 						</control>
 						<control type="image">
-							<posx></posx>
-							<posy></posy>
-							<width>110</width>
-							<height>90</height>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>114</width>
+							<height>97</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posx>0</posx>
-							<posy>92</posy>
-							<width>110</width>
-							<height>13</height>
-							<font>font11</font>
+							<posx>2</posx>
+							<posy>100</posy>
+							<width>106</width>
+							<height>30</height>
+							<font>font16</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
@@ -288,8 +289,8 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>110</width>
-							<height>110</height>
+							<width>120</width>
+							<height>130</height>
 							<texture border="5">thumb_focus.png</texture>
 						</control>
 					</focusedlayout>
@@ -306,9 +307,9 @@
 						<effect type="fade" start="100" end="0" time="400" />
 					</animation>
 					<posx>0</posx>
-					<posy>-5</posy>
+					<posy>-15</posy>
 					<width>$PARAM[panel-width]</width>
-					<height>150</height>
+					<height>130</height>
 					<onleft>1000</onleft>
 					<onright>2200</onright>
 					<onup>2002</onup>
@@ -317,72 +318,72 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<itemlayout height="130" width="150">
-						<!--control type="image">
+					<itemlayout height="150" width="146">
+						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>105</width>
-							<height>110</height>
-							<texture>black.png</texture>
-							<bordertexture border="3">panel_shadow.png</bordertexture>
-							<bordersize>3</bordersize>
-							<colordiffuse>99000000</colordiffuse>
-						</control-->
+							<width>120</width>
+							<height>130</height>
+							<texture>square80.png</texture>
+							<bordertexture border="6"></bordertexture>
+							<bordersize></bordersize>
+							<colordiffuse></colordiffuse>
+						</control>
 						<control type="image">
-							<posx>8</posx>
-							<posy>8</posy>
-							<width>110</width>
-							<height>110</height>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>114</width>
+							<height>97</height>
 							<texture background="true">$INFO[Listitem.Icon]</texture>
 						</control>
-						<!--control type="label">
-							<posx>8</posx>
-							<posy>93</posy>
-							<width>95</width>
-							<height>13</height>
-							<font>font11</font>
-							<textcolor>blue</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-						</control-->
-					</itemlayout>
-					<focusedlayout height="130" width="150">
-						<!--control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>105</width>
-							<height>110</height>
-							<texture>black.png</texture>
-							<bordertexture border="5">panel_shadow.png</bordertexture>
-							<bordersize>3</bordersize>
-							<colordiffuse>99000000</colordiffuse>
-						</control-->
-						<control type="image">
-							<posx>8</posx>
-							<posy>8</posy>
-							<width>110</width>
-							<height>110</height>
-							<texture background="true">$INFO[Listitem.Icon]</texture>
-						</control>
-						<!--control type="label">
-							<posx>8</posx>
-							<posy>93</posy>
-							<width>95</width>
-							<height>13</height>
-							<font>font11</font>
+						<control type="label">
+							<posx>2</posx>
+							<posy>100</posy>
+							<width>106</width>
+							<height>30</height>
+							<font>font16</font>
 							<textcolor>white</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-						</control-->
+						</control>
+					</itemlayout>
+					<focusedlayout height="150" width="150">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>130</height>
+							<texture>black.png</texture>
+							<bordertexture border="5">panel_shadow.png</bordertexture>
+							<bordersize>3</bordersize>
+							<colordiffuse>99000000</colordiffuse>
+						</control>
 						<control type="image">
 							<posx>3</posx>
 							<posy>3</posy>
-							<width>115</width>
-							<height>115</height>
+							<width>114</width>
+							<height>97</height>
+							<texture background="true">$INFO[Listitem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posx>2</posx>
+							<posy>100</posy>
+							<width>106</width>
+							<height>30</height>
+							<font>font16</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>130</height>
 							<texture border="5">thumb_focus.png</texture>
 						</control>
 					</focusedlayout>

@@ -2,6 +2,8 @@
 <includes>
 	<include name="PlayerControlCommons">
 	<include>Window_OpenClose_Animation_Zoom</include>
+	<include>CommonTopBar</include>
+	<include>CommonBottomBar</include>
 		<control type="button">
 			<description>Home Button</description>
 			<posx>10</posx>
@@ -22,21 +24,11 @@
 				<texture>linie_albastra.png</texture>
 		</control>
 		<control type="group">
-			<posx>300</posx>
-			<posy>10</posy>
+			<posx>-120</posx>
+			<posy>40</posy>
+			<width>ScreenWidth</width>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(busydialog) | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(Notification) | Window.IsVisible(volumebar)]</visible>
-			<control type="button">
-				<description>Volume Button</description>
-				<posx>-30</posx>
-				<posy>5</posy>
-				<width>80</width>
-				<height>80</height>
-				<label></label>
-				<texturenofocus colordiffuse="icons">osd_volume.png</texturenofocus>
-				<texturefocus colordiffuse="blue">osd_volume.png</texturefocus>
-				<onclick>ActivateWindow(1112)</onclick>
-			</control>
 			<control type="group">
 				<posx>64</posx>
 				<visible>!Window.IsVisible(1112)</visible>
@@ -44,14 +36,14 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>280</width>
-					<height>32</height>
+					<height>20</height>
 					<font>font20_title</font>
 					<aligny>center</aligny>
 					<label>$INFO[Player.Time(hh:mm:ss)]</label>
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>0</posy>
+					<posy>40</posy>
 					<width>552</width>
 					<height>32</height>
 					<font>font20_title</font>
@@ -60,10 +52,10 @@
 					<label>$VAR[SeekLabel]</label>
 				</control>
 				<control type="label">
-					<posx>652</posx>
+					<posx>1400</posx>
 					<posy>0</posy>
 					<width>180</width>
-					<height>32</height>
+					<height>20</height>
 					<font>font20_title</font>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -71,43 +63,32 @@
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>0</posx>
-					<posy>40</posy>
-					<width>652</width>
-					<height>50</height>
+					<posx>100</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>20</height>
 					<info>Player.Cache</info>
 					<midtexture colordiffuse="grey2">white.png</midtexture>
 					<texturebg></texturebg>
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>0</posx>
-					<posy>40</posy>
-					<width>652</width>
-					<height>40</height>
+					<posx>100</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>20</height>
 					<info>Player.Progress</info>
 				</control>
 				<control type="slider" id="87">
 					<description>Seek Slider</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>652</width>
+					<posx>100</posx>
+					<posy>0</posy>
+					<width>1200</width>
 					<height>32</height>
 					<action>seek</action>
 					<texturesliderbar></texturesliderbar>
 					<textureslidernib></textureslidernib>
 					<textureslidernibfocus></textureslidernibfocus>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>43</posy>
-					<width>552</width>
-					<height>32</height>
-					<font>font20_title</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>black</textcolor>
-					<label>CarPc Carbon By idorel77</label>
 				</control>
 			</control>
 		</control>
@@ -355,6 +336,7 @@
 					<texturefocus colordiffuse="blue">osd_stop.png</texturefocus>
 					<texturenofocus colordiffuse="icons">osd_stop.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
+					<onclick>ParentDir</onclick>
 				</control>
 				<control type="button">
 					<width>100</width>
