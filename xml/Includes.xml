@@ -410,18 +410,7 @@
 				<onclick condition="Skin.HasSetting(UseCustomActionButton6)">$INFO[Skin.String(CustomActionButton6)]</onclick>
 			</control>
 			<include>IconButton6</include>
-			<control type="label">
-				<description>Shutdown label</description>
-				<posx>205r</posx>
-				<posy>20</posy>
-				<height>100</height>
-				<width>350</width>
-				<label>Shutdown</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font50_title</font>
-				<textcolor>white</textcolor>			
-			</control>
+			<include>LabelButton5</include>
 		</control>
 		</include>
 
@@ -656,6 +645,7 @@
 				<width>350</width>
 				<label>$INFO[Skin.String(CustomLabelButton4)]</label>
 				<aligny>center</aligny>
+				<align>right</align>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
 				<visible>Skin.HasSetting(UseCustomLabelButton4) + !IsEmpty(Skin.String(CustomLabelButton4)) </visible>
@@ -681,6 +671,7 @@
 				<width>350</width>
 				<label>$INFO[Skin.String(CustomLabelButton5)]</label>
 				<aligny>center</aligny>
+				<align>right</align>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
 				<visible>Skin.HasSetting(UseCustomLabelButton5) + !IsEmpty(Skin.String(CustomLabelButton5)) </visible>
@@ -706,6 +697,7 @@
 				<width>350</width>
 				<label>$INFO[Skin.String(CustomLabelButton6)]</label>
 				<aligny>center</aligny>
+				<align>right</align>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
 				<visible>Skin.HasSetting(UseCustomLabelButton6) + !IsEmpty(Skin.String(CustomLabelButton6)) </visible>
