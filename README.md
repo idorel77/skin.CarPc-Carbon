@@ -4,7 +4,9 @@ If you like this skin you can by me a bear [![](https://www.paypalobjects.com/en
 
 or 
 
-you can subscribe to my Youtube chanel [![](http://www.freeiconspng.com/uploads/youtube-subscribe-png-23.png)](https://www.youtube.com/user/idorel11?sub_confirmation=1)
+You can subscribe to my Youtube chanel !
+
+[![](http://www.freeiconspng.com/uploads/youtube-subscribe-png-23.png)](https://www.youtube.com/user/idorel11?sub_confirmation=1)
 
 This skin is base on skin.estouchy
 
