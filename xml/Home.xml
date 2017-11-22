@@ -37,6 +37,10 @@
 			<posy>206</posy>
 			<width>525</width>
 			<height>474</height>
+			<onleft>Control.SetFocus(4221)</onleft>
+            <onright>Control.SetFocus(4261)</onright>
+            <onup>Control.SetFocus(131)</onup>
+            <ondown>Control.SetFocus(9002)</ondown>
 			<onclick>Skin.ToggleSetting(HideHomeVisualisation)</onclick>
 			<selected>Skin.HasSetting(HideHomeVisualisation)</selected>
 		</control>
@@ -171,6 +175,10 @@
 		
 		<!--------------------------------------------------------------------------------------->
 		<control type="togglebutton" id="131">
+			<onleft>Skin.ToggleSetting(HideDayNight)</onleft>
+			<onright>Skin.ToggleSetting(HideDayNight)</onright>
+			<onup>Control.SetFocus(600)</onup>
+			<ondown>Control.SetFocus(4201)</ondown>
 			<posx>50</posx>
 			<posy>100</posy>
 			<width>90</width>
@@ -191,6 +199,8 @@
 		<posy>105r</posy>
 		<control type="button" id="4273">
 		<description>Fullscreen</description>
+				<onleft>Control.SetFocus(5571)</onleft>
+                <onright>Control.SetFocus(600)</onright>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>100</width>
@@ -221,26 +231,37 @@
 		
 			<include>VisibleFadeEffect</include>
 			<include>BottomMenuLayout</include>
+			<onup>Control.SetFocus(4271)</onup>
+			<ondown>Control.SetFocus(4251)</ondown>
 			<content>
 				<item>
 					<label></label>
 					<onclick>ActivateWindow(1118)</onclick>
 					<icon >defaultnetwork.png</icon>
+					<onup>Control.SetFocus(4221)</onup>
+					<ondown>Control.SetFocus(4221)</ondown>
 				</item>
 				<item>
 					<label>13376</label>
 					<onclick>ActivateWindow(FileManager)</onclick>
 					<icon >icon_button_filemanager.png</icon>
+					<onup>0</onup>
+					<ondown>0</ondown>
+
 				</item>
 				<item>
 					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<icon>icon_button_favourites.png</icon>
+					<onup>0</onup>
+					<ondown>0</ondown>
 				</item>
 				<item>
 					<label>5</label>
 					<onclick>ActivateWindow(Settings)</onclick>
 					<icon>icon_button_settings.png</icon>
+					<onup>0</onup>
+					<ondown>0</ondown>
 				</item>
 
 			</content>
@@ -250,4 +271,6 @@
 		<include>PlayerControlsAll</include>
 		<include>DayNight</include>
 	</controls>	
+	<onload>Control.SetFocus(4201)</onload>
+	<defaultcontrol always="false">4201</defaultcontrol>
 </window>

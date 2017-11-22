@@ -147,9 +147,9 @@
 			<posx>20</posx>
 			<posy>185</posy>
 			<control type="button" id="4201">
-			<ondown>Control.SetFocus(4211)</ondown>
-                <onup>Control.SetFocus(600)</onup>
-        		<onleft>Control.SetFocus()</onleft>
+				<ondown>Control.SetFocus(4221)</ondown>
+                <onup>Control.SetFocus(131)</onup>
+        		<onleft>Control.SetFocus(4251)</onleft>
 				<onright>Control.SetFocus(4251)</onright>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -171,8 +171,9 @@
 			<posy>370</posy>
 			<control type="button" id="4221">
 				<onup>Control.SetFocus(4201)</onup>
-                <ondown>Control.SetFocus(4221)</ondown>
-                <onright>Control.SetFocus(4261)</onright>
+                <ondown>Control.SetFocus(4241)</ondown>
+                <onright>Control.SetFocus(132)</onright>
+                <onleft>Control.SetFocus(4261)</onleft>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>545</width>
@@ -192,9 +193,10 @@
 			<posx>20</posx>
 			<posy>551</posy>
 			<control type="button" id="4241">
-            <onup>Control.SetFocus(4211)</onup>
-            <ondown>Control.SetFocus(4251)</ondown>
+            <onup>Control.SetFocus(4221)</onup>
+            <ondown>Control.SetFocus(600)</ondown>
             <onright>Control.SetFocus(4271)</onright>
+            <onleft>Control.SetFocus(4271)</onleft>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>725</width>
@@ -346,9 +348,10 @@
 			<posy>185</posy>
 			<include>VisibleFadeEffect</include>
 			<control type="button" id="4251">
-				<onup>Control.SetFocus(4241)</onup>
+				<onup>Control.SetFocus(605)</onup>
                 <ondown>Control.SetFocus(4261)</ondown>
                 <onleft>Control.SetFocus(4201)</onleft>
+                <onright>Control.SetFocus(4201)</onright>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>725</width>
@@ -372,7 +375,8 @@
 			<control type="button" id="4261">
 				<onup>Control.SetFocus(4251)</onup>
                 <ondown>Control.SetFocus(4271)</ondown>
-                <onleft>Control.SetFocus(4211)</onleft>
+                <onleft>Control.SetFocus(132)</onleft>
+                <onright>Control.SetFocus(4221)</onright>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>545</width>
@@ -396,8 +400,9 @@
 			<include>VisibleFadeEffect</include>
 			<control type="button" id="4271">
 				<onup>Control.SetFocus(4261)</onup>
-                <ondown>Control.SetFocus(4281)</ondown>
+                <ondown>Control.SetFocus(605)</ondown>
                 <onleft>Control.SetFocus(4241)</onleft>
+                <onright>Control.SetFocus(4241)</onright>
 				<description>Shutdown Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -771,10 +776,10 @@
             <posx>0</posx>
             <posy>105r</posy>
             <control type="button" id="5572">
-                <ondown>Control.SetFocus()</ondown>
-                <onup>Control.SetFocus()</onup>
-                <onleft>Control.SetFocus()</onleft>
-                <onright>Control.SetFocus()</onright>
+                <ondown>VolumeDown</ondown>
+                <onup>VolumeUp</onup>
+                <onleft>Control.SetFocus(605)</onleft>
+                <onright>Control.SetFocus(5571)</onright>
                 <description>KB_minus</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -802,10 +807,10 @@
                 <bordersize>12</bordersize>
             </control>
             <control type="button" id="5571">
-                <ondown>Control.SetFocus()</ondown>
-                <onup>Control.SetFocus()</onup>
-                <onleft>Control.SetFocus()</onleft>
-                <onright>Control.SetFocus()</onright>
+                <ondown>VolumeDown</ondown>
+                <onup>VolumeUp</onup>
+                <onleft>Control.SetFocus(5572)</onleft>
+                <onright>Control.SetFocus(4273)</onright>
                 <description>Volum Up</description>
                 <posx>110</posx>
                 <posy>0</posy>
@@ -928,9 +933,9 @@
 				<font>-</font>
 				<texturefocus colordiffuse="blue">osd_previous.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_previous.png</texturenofocus>
-				<onleft></onleft>
+				<onleft>Control.SetFocus(4273)</onleft>
                 <onright>Control.SetFocus(602)</onright>
-                <onup>Control.SetFocus(602)</onup>
+                <onup>Control.SetFocus(4241)</onup>
         		<ondown>Control.SetFocus(4201)</ondown>
                 <onclick>PlayerControl(Previous)</onclick>
 			</control>
@@ -949,8 +954,8 @@
 				<alttexturenofocus colordiffuse="icons">osd_play.png</alttexturenofocus>
 				<onleft>Control.SetFocus(600)</onleft>
                 <onright>Control.SetFocus(603)</onright>
-                <onup>Control.SetFocus(603)</onup>
-                <ondown>Control.SetFocus(600)</ondown>
+                <onup>Control.SetFocus(4241)</onup>
+                <ondown>Control.SetFocus(4201)</ondown>
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
 			<control type="button" id="603">
@@ -964,8 +969,8 @@
 				<texturenofocus colordiffuse="icons">osd_stop.png</texturenofocus>
 				<onleft>Control.SetFocus(602)</onleft>
                 <onright>Control.SetFocus(605)</onright>
-                <onup>Control.SetFocus(605)</onup>
-                <ondown>Control.SetFocus(602)</ondown>
+                <onup>Control.SetFocus(4271)</onup>
+                <ondown>Control.SetFocus(4251)</ondown>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="605">
@@ -978,9 +983,9 @@
 				<texturefocus colordiffuse="blue">osd_next.png</texturefocus>
 				<texturenofocus colordiffuse="icons">osd_next.png</texturenofocus>
 				<onleft>Control.SetFocus(603)</onleft>
-                <onright>Control.SetFocus(4298)</onright>
-                <onup>Control.SetFocus(4298)</onup>
-                <ondown>Control.SetFocus(603)</ondown>
+                <onright>Control.SetFocus(5572)</onright>
+                <onup>Control.SetFocus(4271)</onup>
+                <ondown>Control.SetFocus(4251)</ondown>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 		</control>
