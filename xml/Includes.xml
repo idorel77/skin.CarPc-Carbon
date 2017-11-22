@@ -415,7 +415,7 @@
 				<onclick condition="Skin.HasSetting(UseCustomActionButton6)">$INFO[Skin.String(CustomActionButton6)]</onclick>
 			</control>
 			<include>IconButton6</include>
-			<include>LabelButton5</include>
+			<include>LabelButton6</include>
 		</control>
 		</include>
 
@@ -537,7 +537,7 @@
 	<include name="IconButton6">
 		<control type="group">
 			<control type="image">
-				<visible>!Skin.HasSetting(HideHomeIcon5)</visible>
+				<visible>!Skin.HasSetting(HideHomeIcon6)</visible>
 				<description>Shutdown</description>
 				<posx>170r</posx>
 				<posy>25</posy>
@@ -1075,6 +1075,17 @@
 	<include name="ScreenWidth-4x3">
 		<width>1280</width>
 	</include>
+	<include name="KbdBttnWidth">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">KbdBttnWidth-16x9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">KbdBttnWidth-4x3</include>
+		<include condition="!String.IsEqual(Skin.AspectRatio,4:3) + String.IsEqual(Skin.AspectRatio,16:9)">KbdBttnWidth-16x9</include>
+	</include>
+	<include name="KbdBttnWidth-16x9">
+		<width>140</width>
+	</include>
+	<include name="KbdBttnWidth-4x3">
+		<width>105</width>
+	</include>	
 	<include name="MusicBackground">
 	<include>Window_OpenClose_Animation_Zoom</include>
 	<control type="image">
@@ -1978,14 +1989,41 @@
 		</item>
 	</include>
 	<include name="KeyboardButton">
-		<width>140</width>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">KeyboardButtonWidth-16x9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">KeyboardButtonWidth-4x3</include>
 		<height>140</height>
 		<texturenofocus >square.png</texturenofocus>
 		<texturefocus>list_focus.png</texturefocus>
 		<font>font70_title</font>
 		<align>center</align>
-		<aligny>center</aligny>
+		<aligny>center</aligny>		
 	</include>
+	<include name="KeyboardButtonWidth-16x9">
+		<width>140</width>
+	</include>
+	<include name="KeyboardButtonWidth-4x3">
+		<width>102</width>
+	</include>
+	<include name="BottomButtonWidth">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">BottomButtonWidth-16x9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">BottomButtonWidth-4x3</include>
+	</include>
+	<include name="BottomButtonWidth-16x9">
+		<width>280</width>
+	</include>
+	<include name="BottomButtonWidth-4x3">
+		<width>208</width>
+	</include>
+	<include name="SideButtonWidth">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">SideButtonWidth-16x9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideButtonWidth-4x3</include>
+	</include>
+	<include name="SideButtonWidth-16x9">
+		<width>250</width>
+	</include>
+	<include name="SideButtonWidth-4x3">
+		<width>208</width>
+	</include>	
 	<include name="PopupMenu">
 		<control type="group">
 			<visible>!String.IsEmpty(Window(Home).Property(PopupMenuVisible))</visible>
