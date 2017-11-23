@@ -54,7 +54,7 @@
 		<!--include>HomeRecentlyAddedInfo</include-->
 		<!--<include>BottomNowPLaying</include>-->
 		
-		<!--------------------------------------Shortcut Home---------------------------->
+		<!--#####################################Shortcut Home#################################-->
 		
 		<control type="group">
 			<posx>10</posx>
@@ -173,7 +173,7 @@
 			<param name="panel-height">100</param>
 		</include>
 		
-		<!--------------------------------------------------------------------------------------->
+		<!--######################################################################-->
 		<control type="togglebutton" id="131">
 			<onleft>Skin.ToggleSetting(HideDayNight)</onleft>
 			<onright>Skin.ToggleSetting(HideDayNight)</onright>
