@@ -665,6 +665,48 @@
 						<selected>!Skin.HasSetting(HideHomeButtonRecentMovie)</selected>
 						<textoffsetx>20</textoffsetx>
 					</control>
+				        <control type="radiobutton" id="715">
+						<width>$PARAM[panel-width]</width>
+						<height>80</height>
+						<aligny>center</aligny>
+						<font>font24_title</font>
+						<textcolor>white</textcolor>
+						<texturefocus>list_focus.png</texturefocus>
+						<texturenofocus>bara_jos.png</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<label>Home Button Favourites</label>
+						<onclick>Skin.ToggleSetting(HideHomeButtonFavourites)</onclick>
+						<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
+						<textoffsetx>20</textoffsetx>
+					</control>
+					<control type="radiobutton" id="716">
+						<width>$PARAM[panel-width]</width>
+						<height>80</height>
+						<aligny>center</aligny>
+						<font>font24_title</font>
+						<textcolor>white</textcolor>
+						<texturefocus>list_focus.png</texturefocus>
+						<texturenofocus>bara_jos.png</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<label>Home Button File Maneger</label>
+						<onclick>Skin.ToggleSetting(HideHomeButtonFileManager)</onclick>
+						<selected>!Skin.HasSetting(HideHomeButtonFileManager)</selected>
+						<textoffsetx>20</textoffsetx>
+					</control>
+					<control type="radiobutton" id="717">
+						<width>$PARAM[panel-width]</width>
+						<height>80</height>
+						<aligny>center</aligny>
+						<font>font24_title</font>
+						<textcolor>white</textcolor>
+						<texturefocus>list_focus.png</texturefocus>
+						<texturenofocus>bara_jos.png</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<label>Home Time</label>
+						<onclick>Skin.ToggleSetting(HideHomeButtonTime)</onclick>
+						<selected>!Skin.HasSetting(HideHomeButtonTime)</selected>
+						<textoffsetx>20</textoffsetx>
+					</control>
 			</control>	
 		<include>Header</include>
 		<include>CommonNowPlaying</include>
