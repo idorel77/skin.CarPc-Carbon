@@ -228,46 +228,31 @@
             </control>
 		</control>			
  		<control type="panel" id="9002">
-		
 			<include>VisibleFadeEffect</include>
 			<include>BottomMenuLayout</include>
 			<onup>Control.SetFocus(4271)</onup>
 			<ondown>Control.SetFocus(4251)</ondown>
 			<content>
 				<item>
-					<label></label>
-					<onclick>ActivateWindow(1118)</onclick>
-					<icon >defaultnetwork.png</icon>
-					<onup>Control.SetFocus(4221)</onup>
-					<ondown>Control.SetFocus(4221)</ondown>
-				</item>
-				<item>
 					<label>13376</label>
 					<onclick>ActivateWindow(FileManager)</onclick>
 					<icon >icon_button_filemanager.png</icon>
-					<onup>0</onup>
-					<ondown>0</ondown>
-
+					<visible>!Skin.HasSetting(HideHomeButtonFileManager)</visible>
 				</item>
 				<item>
 					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<icon>icon_button_favourites.png</icon>
-					<onup>0</onup>
-					<ondown>0</ondown>
+					<visible>!Skin.HasSetting(HideHomeButtonFavourites)</visible>
 				</item>
 				<item>
 					<label>5</label>
 					<onclick>ActivateWindow(Settings)</onclick>
 					<icon>icon_button_settings.png</icon>
-					<onup>0</onup>
-					<ondown>0</ondown>
 				</item>
-
 			</content>
 		</control>
-		
-		<include>VolumeBottom</include>
+	        <include>VolumeBottom</include>
 		<include>PlayerControlsAll</include>
 		<include>DayNight</include>
 	</controls>	
