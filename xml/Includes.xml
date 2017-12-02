@@ -11,9 +11,9 @@
 	
 	<!-- ####################### my code #######################-->		
 	<include name="Time">
-	<control type="group">
-	 <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonTime) + !Window.IsVisible(Notification)</visible>
-	   <!--<control type="image">		
+		<control type="group">
+	 	<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonTime) + !Window.IsVisible(Notification) + !Skin.HasSetting(HideHomeButtonTime)</visible>
+	   	<!--<control type="image">		
 		<include>Window_OpenClose_Animation_Slide_Down</include>
 		<include>VisibleFadeEffect</include>
 			<posx>550</posx>
@@ -27,9 +27,11 @@
 		<control type="label">
 			<include>Window_OpenClose_Animation_Slide_Down</include>
 			<description>time label</description>
-			<posx>740</posx>
+			<posx>0</posx>
 			<posy>0</posy>
-			<width>400</width>
+			<width>ScreenWidth</width>
+			<align>center</align>
+            <aligny>center</aligny>
 			<height>90</height>
 			<font>font80_title</font>
 			<textcolor>white</textcolor>
@@ -222,7 +224,7 @@
 		</control>
 	</include>
 	<include name="Logo">
-	<control type="group" id="4225">
+		<control type="group" id="4225">
 		<visible>!Skin.HasSetting(HideHomeButtonLogo) + Skin.HasSetting(HideHomeVisualisation) | !Player.HasAudio</visible>
 		<control type="image">
 			<description>Normal Default Logo Image</description>
@@ -246,10 +248,10 @@
 			<visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath)) </visible>
 			<include>Window_OpenClose_Animation_Zoom</include>
 		</control>
-	</control>
-</include>
+		</control>
+	</include>
 	<include name="Visualisation">
-	<control type="group" id="4226">
+		<control type="group" id="4226">
 	    	<visible>!Skin.HasSetting(HideHomeVisualisation) + Player.HasAudio + !Control.IsVisible(4225)</visible>
 			<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>600</posx>
@@ -356,7 +358,7 @@
 				<font>-</font>
 				<texturenofocus >home_4.png</texturenofocus>
 				<texturefocus border="5">home_4_p.png</texturefocus>
-				<onclick condition="!Skin.HasSetting(UseCustomActionButton4)">ActivateWindow(Music, sources://music/)</onclick>
+				<onclick condition="!Skin.HasSetting(UseCustomActionButton4)">ActivateWindow(Music)</onclick>
 				<onclick condition="Skin.HasSetting(UseCustomActionButton4)">$INFO[Skin.String(CustomActionButton4)]</onclick>
 			</control>
 			<include>IconButton4</include>
@@ -410,11 +412,11 @@
 				<onclick condition="Skin.HasSetting(UseCustomActionButton6)">$INFO[Skin.String(CustomActionButton6)]</onclick>
 			</control>
 			<include>IconButton6</include>
-			<include>LabelButton5</include>
+			<include>LabelButton6</include>
 		</control>
 		</include>
 
-	<!------------------------------------------ ICONS Buttons Home-------------------------------------------------->
+	<!--############################################ ICONS Buttons Home ########################################################-->
 	<include name="IconButton1">
 		<control type="group">
 			<control type="image">
@@ -552,7 +554,7 @@
 			</control>
 		</control>
 	</include>	
-	<!----------------------------------------------------Label Buttons Home---------------------------------------------------------------------->
+	<!--########################################################## Label Buttons Home ##############################################################-->
 	<include name="LabelButton1">
 		<control type="label">
 				<posx>182</posx>
@@ -644,8 +646,8 @@
 				<height>100</height>
 				<width>350</width>
 				<label>$INFO[Skin.String(CustomLabelButton4)]</label>
-				<aligny>center</aligny>
 				<align>right</align>
+				<aligny>center</aligny>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
 				<visible>Skin.HasSetting(UseCustomLabelButton4) + !IsEmpty(Skin.String(CustomLabelButton4)) </visible>
@@ -3304,253 +3306,6 @@
 					<selected>Skin.HasSetting(CustomActionButton6)</selected>
 					<visible>Skin.HasSetting(UseCustomActionButton6)</visible>
 				</control>
-		<!--<control type="label">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>50</height>
-			<label>For Navigation button:  Waze - Maps - Navit- Sygic</label>
-			<font>font20_title</font>
-			<align>left</align>
-			<aligny>center</aligny>
-		</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>$PARAM[panel-width]</width>
-				<height>2</height>
-				<texture >linie_albastra.png</texture>
-			</control>
-		<control type="button" id="102">
-			<description>This button sets string value to Navigation</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>80</height>
-			<aligny>center</aligny>
-			<font>font24_title</font>
-			<textcolor>white</textcolor>
-			<texturefocus>list_focus.png</texturefocus>
-			<texturenofocus>bara_sus.png</texturenofocus>
-			<pulseonselect>false</pulseonselect>
-			<label>Navigation Button</label>
-			<label2></label2>
-			<textoffsetx>20</textoffsetx>
-			<align>center</align>
-			<onclick>Skin.SetString(MenuButton2Value)</onclick>
-			<selected>Skin.HasSetting(MenuButton2Value)</selected>
-			<onup></onup>
-			<ondown>103</ondown>
-		</control>
-		<control type="label">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>50</height>
-			<label>For Radio button:  TuneIn - DiFM - AddonTuneIn </label>
-			<font>font20_title</font>
-			<align>left</align>
-			<aligny>center</aligny>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture >linie_albastra.png</texture>
-		</control>
-		<control type="button" id="103">
-			<description>Radio Button</description>
-			<width>$PARAM[panel-width]</width>
-			<height>80</height>
-			<aligny>center</aligny>
-			<font>font24_title</font>
-			<textcolor>white</textcolor>
-			<texturefocus>list_focus.png</texturefocus>
-			<texturenofocus>bara_sus.png</texturenofocus>
-			<pulseonselect>false</pulseonselect>
-			<label>Radio Button</label>
-			<label2></label2>
-			<textoffsetx>20</textoffsetx>
-			<align>center</align>
-			<onclick>Skin.SetString(MenuButton3Value)</onclick>
-			<selected>Skin.HasSetting(MenuButton3Value)</selected>
-		</control>
-		<control type="label">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>50</height>
-			<label>For Programs button:  AnroidApp - Programs</label>
-			<font>font20_title</font>
-			<align>left</align>
-			<aligny>center</aligny>
-		</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>$PARAM[panel-width]</width>
-				<height>2</height>
-				<texture >linie_albastra.png</texture>
-			</control>
-		<control type="button" id="104">
-			<description>Programs Button</description>
-			<width>$PARAM[panel-width]</width>
-			<height>80</height>
-			<aligny>center</aligny>
-			<font>font24_title</font>
-			<textcolor>white</textcolor>
-			<texturefocus>list_focus.png</texturefocus>
-			<texturenofocus>bara_sus.png</texturenofocus>
-			<pulseonselect>false</pulseonselect>
-			<label>Programs Button</label>
-			<label2></label2>
-			<textoffsetx>20</textoffsetx>
-			<align>center</align>
-			<onclick>Skin.SetString(MenuButton5Value)</onclick>
-			<selected>Skin.HasSetting(MenuButton5Value)</selected>
-		</control>-->
-
-			<!--control type="radiobutton" id="102">
-				<description>Show LiveTV</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[31556]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonLiveTV)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonLiveTV)</selected>
-				<enable>System.HasPVRAddon</enable>
-				<textoffsetx>20</textoffsetx>
-			</control>
-			<control type="radiobutton" id="103">
-				<description>Show Radio</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[19021]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonRadio)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonRadio)</selected>
-				<enable>System.HasPVRAddon</enable>
-				<textoffsetx>20</textoffsetx>
-			</control>
-			<control type="radiobutton" id="104">
-				<description>Hide Videos</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[3]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonVideo)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonVideo)</selected>
-				<textoffsetx>20</textoffsetx>
-			</control>
-			<control type="radiobutton" id="105">
-				<description>Hide Movies</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[20342]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonMovies)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonMovies)</selected>
-				<textoffsetx>20</textoffsetx>
-				<enable>Library.HasContent(Movies)</enable>
-			</control>
-			<control type="radiobutton" id="106">
-				<description>Hide TVShows</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[20343]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonTVShows)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonTVShows)</selected>
-				<textoffsetx>20</textoffsetx>
-				<enable>Library.HasContent(TVShows)</enable>
-			</control>
-			<control type="radiobutton" id="107">
-				<description>Hide Music</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[2]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonMusic)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonMusic)</selected>
-				<textoffsetx>20</textoffsetx>
-			</control>
-			<control type="radiobutton" id="108">
-				<description>Hide Pictures</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[1]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonPictures)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonPictures)</selected>
-				<textoffsetx>20</textoffsetx>
-			</control>
-			<control type="radiobutton" id="109">
-				<description>Hide Programs</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[0]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonPrograms)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonPrograms)</selected>
-				<textoffsetx>20</textoffsetx>
-			</control-->
-
-			<!--<control type="radiobutton" id="111">
-				<description>Hide Favourites</description>
-				<width>$PARAM[panel-width]</width>
-				<height>80</height>
-				<aligny>center</aligny>
-				<font>font24_title</font>
-				<textcolor>white</textcolor>
-				<texturefocus>list_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>$LOCALIZE[1036]</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonFavourites)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
-				<textoffsetx>20</textoffsetx>
-			</control>-->
 		</control>
 		<control type="grouplist" id="200">
 			<description>control area</description>

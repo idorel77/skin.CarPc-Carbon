@@ -484,8 +484,8 @@
 		</font>
 		</fontset>	
 		
-			<fontset id="halloween3" > 
-<font>
+	<fontset id="halloween3" > 
+        <font>
 			<name>font13</name>
 			<filename>halloween3.ttf</filename>
 			<size>13</size>
@@ -601,6 +601,128 @@
 		<font>
 			<name>font20_narrow</name>
 			<filename>halloween3.ttf</filename>
+			<size>20</size>
+			<linespacing>0.80</linespacing>
+		</font>
+		</fontset>
+		
+		<fontset id="Christmas" > 
+        <font>
+			<name>font13</name>
+			<filename>Christmas.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>Christmas.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font20</name>
+			<filename>Christmas.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>font22</name>
+			<filename>Christmas.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>font24</name>
+			<filename>Christmas.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>font25</name>
+			<filename>Christmas.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>font30</name>
+			<filename>Christmas.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font40</name>
+			<filename>Christmas.ttf</filename>
+			<size>40</size>
+		</font>
+	<!-- Title Fonts -->
+		<font>
+			<name>font11_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>11</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font14_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>14</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font18_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>18</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font20_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>20</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>50</size>
+			<style></style>
+		</font>
+		<font>
+			<name>font28_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>28</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font30_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>30</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font35_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>60</size>
+			<style></style>
+		</font>
+		<font>
+			<name>font50_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>70</size>
+			<style></style>
+		</font>
+		<font>
+			<name>font60_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>60</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font70_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>70</size>
+			<style>lighten</style>
+		</font>
+		<font>
+			<name>font80_title</name>
+			<filename>Christmas.ttf</filename>
+			<size>80</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font20_narrow</name>
+			<filename>Christmas.ttf</filename>
 			<size>20</size>
 			<linespacing>0.80</linespacing>
 		</font>

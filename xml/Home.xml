@@ -50,7 +50,7 @@
 		<!--include>HomeRecentlyAddedInfo</include-->
 		<!--<include>BottomNowPLaying</include>-->
 		
-		<!--------------------------------------Shortcut Home---------------------------->
+		<!--################################################ Shortcut Home ###############################-->
 		
 		<control type="group">
 			<posx>10</posx>
@@ -169,7 +169,7 @@
 			<param name="panel-height">100</param>
 		</include>
 		
-		<!--------------------------------------------------------------------------------------->
+		<!--##################################################################################-->
 		<control type="togglebutton" id="131">
 			<posx>50</posx>
 			<posy>100</posy>
@@ -223,29 +223,24 @@
 			<include>BottomMenuLayout</include>
 			<content>
 				<item>
-					<label></label>
-					<onclick>ActivateWindow(1118)</onclick>
-					<icon >defaultnetwork.png</icon>
-				</item>
-				<item>
 					<label>13376</label>
 					<onclick>ActivateWindow(FileManager)</onclick>
 					<icon >icon_button_filemanager.png</icon>
+					<visible>!Skin.HasSetting(HideHomeButtonFileManager)</visible>
 				</item>
 				<item>
 					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<icon>icon_button_favourites.png</icon>
+					<visible>!Skin.HasSetting(HideHomeButtonFavourites)</visible>
 				</item>
 				<item>
 					<label>5</label>
 					<onclick>ActivateWindow(Settings)</onclick>
 					<icon>icon_button_settings.png</icon>
 				</item>
-
 			</content>
 		</control>
-		
 		<include>VolumeBottom</include>
 		<include>PlayerControlsAll</include>
 		<include>DayNight</include>
