@@ -120,6 +120,19 @@
 					<textoffsetx>20</textoffsetx>
 					<onfocus>Skin.SetString(SkinSettings,7)</onfocus>
 				</control>
+				<control type="button" id="97">
+					<width>390</width>
+					<height>80</height>
+					<aligny>center</aligny>
+					<font>font24_title</font>
+					<textcolor>white</textcolor>
+					<texturefocus>list_focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Extras</label>
+					<textoffsetx>20</textoffsetx>
+					<onfocus>Skin.SetString(SkinSettings,8)</onfocus>
+				</control>
 			</control>
 			<include content="SkinSettingsContent" condition="String.IsEqual(Skin.AspectRatio,16:9)">
 				<param name="panel-width">1316</param>
@@ -707,7 +720,49 @@
 						<selected>!Skin.HasSetting(HideHomeButtonTime)</selected>
 						<textoffsetx>20</textoffsetx>
 					</control>
-			</control>	
+		    </control>
+			    <control type="grouplist" id="800">
+			    <description>control area</description>
+			    <posx>390</posx>
+			    <posy>140</posy>
+			    <width>$PARAM[panel-width]</width>
+			    <height>640</height>
+			    <itemgap>-1</itemgap>
+			    <onup>200</onup>
+			    <ondown>9002</ondown>
+			    <onleft>9</onleft>
+			    <onright>60</onright>
+			    <visible>Skin.String(SkinSettings,8)</visible>
+			      <control type="radiobutton" id="801">
+					<width>$PARAM[panel-width]</width>
+					<height>80</height>		
+					<aligny>center</aligny>
+					<font>font24_title</font>
+					<textcolor>white</textcolor>
+					<texturefocus>list_focus.png</texturefocus>
+					<texturenofocus border="40,0,40,5">bara_jos.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Start video intro</label>
+					<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+					<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+				</control>
+				<control type="button" id="802">
+					<description>Custom Logo Path</description>
+					<width>$PARAM[panel-width]</width>
+					<height>80</height>
+					<aligny>center</aligny>
+					<font>font24_title</font>
+					<textcolor>white</textcolor>
+					<texturefocus>list_focus.png</texturefocus>
+					<texturenofocus border="40,0,40,5">list_nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Custom video intro path:</label>
+					<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+					<onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
+					<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+					<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+				</control>
+	    </control>	
 		<include>Header</include>
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>

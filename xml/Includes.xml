@@ -1090,7 +1090,7 @@
 		<aspectratio>scale</aspectratio>
 		<include>ScreenWidth</include>
 		<height>960</height>
-		<texture colorblur="grey">$VAR[OSDImage]</texture>
+		<texture >$VAR[OSDImage]</texture>
 		<aspectratio>scale</aspectratio>
 		<fadetime>FanartCrossfadeTime</fadetime>
 	</control>
@@ -3332,7 +3332,7 @@
 				<label>$LOCALIZE[31551] 1</label>
 				<label2>$INFO[system.addontitle(Skin.String(HomeAddonButton1))]</label2>
 				<textoffsetx>20</textoffsetx>
-				<onclick>Skin.SetFile(HomeAddonButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.python.script))</onclick>
+				<onclick>Skin.SetAddon(HomeAddonButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.python.script)</onclick>
 			</control>
 			<control type="button" id="203">
 				<description>Home Addon Button</description>

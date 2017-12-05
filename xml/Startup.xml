@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<controls>
+		<control type="button" id="10">
+			<description>trigger</description>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>			
+		</control>
+		<control type="button" id="10">
+			<description>trigger with startup Playlist</description>
+			<onfocus>PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+	</controls>
 </window>
