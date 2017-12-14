@@ -187,6 +187,7 @@
 			<selected>Skin.HasSetting(HideDayNight)</selected>
 		</control>
 		<control type="group" id="4272">
+		<visible>Player.HasAudio</visible>
 		<posx>220</posx>
 		<posy>105r</posy>
 		<control type="button" id="4273">
@@ -218,10 +219,15 @@
             </control>
 		</control>			
  		<control type="panel" id="9002">
-		
 			<include>VisibleFadeEffect</include>
 			<include>BottomMenuLayout</include>
 			<content>
+			    <item>
+					<label></label>
+					<onclick>ActivateWindow(Visualisation)</onclick>
+					<icon >defaultaddonaudiodecoder.png</icon>
+					<visible>!Skin.HasSetting(HideHomeButtonVisualisation)+ Player.HasAudio</visible>
+				</item>
 				<item>
 					<label>13376</label>
 					<onclick>ActivateWindow(FileManager)</onclick>

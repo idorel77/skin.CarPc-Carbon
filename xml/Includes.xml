@@ -8,6 +8,7 @@
 	<include file="ViewsThumbnail.xml" />
 	<include file="ViewsWide.xml" />
 	<include file="ViewsPVR.xml" />
+	<include file="Includes_VideoLyrics.xml" />
 	
 	<!-- ####################### my code #######################-->		
 	<include name="Time">
@@ -989,6 +990,45 @@
 	</include>	
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
+	<variable name="Col_lyr1">
+		<value condition="[String.EndsWith(Container(110).Currentitem,1)]">ffffea4f</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,2)]">ffff4d99</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,3)]">ffff8554</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,4)]">ff4a7eb8</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,5)]">ffFF5354</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,6)]">ff46e046</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,7)]">ffFFEA4F</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,8)]">ffFF4D99</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,9)]">ffFF8655</value>
+		<value>ff4A7EB8</value>
+	</variable>
+	<variable name="Col_lyr2">
+		<value condition="[String.EndsWith(Container(110).Currentitem,1)]">ff46e046</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,2)]">ffffea4f</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,3)]">ff46e046</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,4)]">ffFF8655</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,5)]">ff46E046</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,6)]">ffffea4f</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,7)]">ffFF8655</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,8)]">ff46E046</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,9)]">ffFFEA4F</value>
+		<value>ffFF5354</value>
+	</variable>
+	<variable name="Col_lyr3">
+		<value condition="[String.EndsWith(Container(110).Currentitem,1)]">ff4a7eb8</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,2)]">ff4a80b9</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,3)]">ffff4d99</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,4)]">ffFF4D99</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,5)]">ffFF8655</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,6)]">ffff4d99</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,7)]">ffFF5354</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,8)]">ff4A7EB8</value>
+		<value condition="[String.EndsWith(Container(110).Currentitem,9)]">ff46E046</value>
+		<value>ffFFEA4F</value>
+	</variable>
+	<variable name="Col_lyr4">
+		<value>fffffaf0</value>
+	</variable>	
 	<variable name="PlaylistHeader">
 		<value condition="Window.IsVisible(musicplaylist)">$LOCALIZE[10517]</value>
 		<value condition="Window.IsVisible(videoplaylist)">$LOCALIZE[10522]</value>
@@ -1090,7 +1130,7 @@
 		<aspectratio>scale</aspectratio>
 		<include>ScreenWidth</include>
 		<height>960</height>
-		<texture >$VAR[OSDImage]</texture>
+		<texture >$INFO[MusicPlayer.Cover]</texture>
 		<aspectratio>scale</aspectratio>
 		<fadetime>FanartCrossfadeTime</fadetime>
 	</control>
@@ -1415,7 +1455,6 @@
 			<content>
 				<item>
 					<label>31200</label>
-					<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
 					<onclick>ParentDir</onclick>
 					<icon>icon_button_back.png</icon>
 				</item>

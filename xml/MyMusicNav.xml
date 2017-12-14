@@ -6,7 +6,7 @@
 	<controls>
 		<include>CommonBackground</include>
 		<include>SideMenu</include>
-		<include>Header</include>
+		<include>Header</include>  
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
 		<control type="label">

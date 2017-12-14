@@ -1,80 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol></defaultcontrol>
 	<controls>
-	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
-		<aspectratio>scale</aspectratio>
-		<include>ScreenWidth</include>
-		<height>960</height>
-		<texture colorblur="grey">$INFO[MusicPlayer.Cover]</texture>
-		<aspectratio>scale</aspectratio>
-	</control>
-	<include>MusicBackground</include>
-	<include>CommonTopBar</include>	
-	<include>Window_OpenClose_Animation_Zoom</include>
-		<control type="button">
-			<description>Home Button</description>
-			<posx>10</posx>
-			<posy>2</posy>
-			<width>100</width>
-			<height>100</height>
-			<font></font>
-			<texturenofocus colordiffuse="icons">icon_home.png</texturenofocus>
-			<texturefocus colordiffuse="blue">icon_home.png</texturefocus>
-			<onclick>Dialog.Close(all)</onclick>
-			<onclick>ActivateWindow(Home)</onclick>
-		</control>
-		<control type="image">
-				<posx>110</posx>
-				<posy>15</posy>
-				<width>1</width>
-				<height>70</height>
-				<texture>linie_albastra.png</texture>
-		</control>
-		<control type="group">
-			<posx>100r</posx>
-			<posy>0</posy>
-			<control type="image">
-				<posx>0</posx>
-				<posy>15</posy>
-				<width>1</width>
-				<height>70</height>
-				<texture>linie_albastra_v.png</texture>
-				<colordiffuse></colordiffuse>
-			</control>
-			<control type="button">
-				<description>Close Button</description>
-				<posx>4</posx>
-				<posy>0</posy>
-				<width>100</width>
-				<height>100</height>
-				<font></font>
-				<onclick>Back</onclick>
-				<texturefocus colordiffuse="blue">icon_dialog_close.png</texturefocus>
-				<texturenofocus colordiffuse="icons">icon_dialog_close.png</texturenofocus>
-			</control>
-		</control>
-		<control type="image">
-			<description>fanart</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<include>ScreenWidth</include>
-			<height>960</height>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
-			<aspectratio>scale</aspectratio>
-		</control>
-		<control type="visualisation">
+	    <control type="image">
+		    <posx>0</posx>
+		    <posy>0</posy>
+		    <aspectratio>scale</aspectratio>
+		    <include>ScreenWidth</include>
+		    <height>960</height>
+		    <texture >$INFO[MusicPlayer.Cover]</texture>
+		    <aspectratio>scale</aspectratio>
+	    </control>
+	    <!--<control type="visualisation">
 			<description>visualisation</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
 			<height>960</height>
+		</control>-->
+	    <control type="image">
+		    <posx>0</posx>
+		    <posy>0</posy>
+		    <aspectratio>scale</aspectratio>
+		    <include>ScreenWidth</include>
+		    <height>960</height>
+		    <texture colorblur="grey">special://skin/media/music_90.png</texture>
+		    <aspectratio>scale</aspectratio>
+		    <fadetime>FanartCrossfadeTime</fadetime>
+	    </control>
+	    <control type="image">
+	   	    <posx>0</posx>
+		    <posy>200r</posy>
+		    <include>ScreenWidth</include>
+		    <height>200</height>
+		    <texture>side_panel.png</texture>
+		    <colordiffuse>A0000000</colordiffuse>
+	    </control>
+	    <control type="image">
+			<description>cover image</description>
+			<posx>20</posx>
+			<posy>320r</posy>
+			<width>300</width>
+			<height>300</height>
+			<texture>$INFO[MusicPlayer.Cover]</texture>
+			<aspectratio>keep</aspectratio>
 		</control>
-		<include>CommonBottomBar</include>
-		<include>PlayerControlsAll</include>
+		<control type="label">
+			<posx>340</posx>
+			<posy>180r</posy>
+			<width>200</width>
+			<height>50</height>
+			<align>left</align>
+			<font>font40</font>
+			<textcolor>blue</textcolor>
+			<label>Artist: </label>
+		</control>
+		<control type="label">
+			<posx>460</posx>
+			<posy>180r</posy>
+			<width>800</width>
+			<height>50</height>
+			<align>left</align>
+			<font>font40</font>
+			<label>$INFO[MusicPlayer.Artist]</label>
+		</control>
+		<control type="label">
+			<posx>340</posx>
+			<posy>120r</posy>
+			<width>300</width>
+			<height>50</height>
+			<align>left</align>
+			<font>font40</font>
+			<textcolor>blue</textcolor>
+			<label>Title:</label>
+		</control>
+		<control type="label">
+			<posx>460</posx>
+			<posy>120r</posy>
+			<width>800</width>
+			<height>50</height>
+			<align>left</align>
+			<font>font40</font>
+			<label>$INFO[MusicPlayer.Title]</label>
+		</control>
+		<control type="label">
+			<posx>340</posx>
+			<posy>60r</posy>
+			<width>300</width>
+			<height>50</height>
+			<align>left</align>
+			<font>font30</font>
+			<textcolor>blue</textcolor>
+			<label>Album:</label>
+		</control>
+		<control type="label">
+			<posx>460</posx>
+			<posy>60r</posy>
+			<width>400</width>
+			<height>25</height>
+			<align>left</align>
+			<font>font30</font>
+			<label>$INFO[MusicPlayer.Album]</label>
+		</control>
+		<control type="group">
+			<posx>275r</posx>
+			<posy>145r</posy>
+			<width>275</width>
+			<height>100</height>
+		    <control type="image">
+	    	    <description>Rating</description>
+			    <posx>0</posx>
+			    <posy>0</posy>
+			    <width>256</width>
+		        <height>32</height>
+			    <texture fallback="rating/0.png">$INFO[MusicPlayer.UserRating,rating/,.png]</texture>
+		    </control>
+		    <control type="image">
+		    	<description>Audio Codec Image</description>
+			    <posx>156</posx>
+			    <posy>32</posy>
+			    <width>100</width>
+			    <height>44</height>
+			    <texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
+		    </control>
+		</control>
+		<control type="label">
+		    <posx>20r</posx>
+			<posy>180r</posy>
+			<width>300</width>
+			<height>25</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font30</font>
+			<label>$INFO[MusicPlayer.Playlistposition,$LOCALIZE[554]: ]$INFO[MusicPlayer.Playlistlength, / ]</label>
+		</control>
+		<control type="label">
+			<posx>10r</posx>
+			<posy>60r</posy>
+			<width>700</width>
+			<height>25</height>
+			<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
+			<align>right</align>
+			<font>font24</font>
+			<textcolor>selected</textcolor>
+		</control>
 	    <include>DayNight</include>
-
 	</controls>
 </window>
